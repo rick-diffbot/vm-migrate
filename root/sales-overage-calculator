@@ -1,0 +1,301 @@
+#!/usr/bin/ruby
+
+require "google_drive"
+require "faraday"
+require "json"
+require "date"
+require "mail"
+
+## FUNCTION DEFINITIONS
+
+def dump_to_sheet(rowArray, sheetVar, startRow)
+    rowNum = startRow
+    for row in rowArray
+        colNum = 1
+        for cell in row
+            sheetVar[rowNum, colNum] = cell
+            colNum += 1
+        end
+        rowNum += 1
+    end
+    return sheetVar
+end
+
+## INITIAL VARIABLES
+
+scriptDir = "/var/www/sales-overage-calculator/"
+
+# Create a Google Drive Session
+session = GoogleDrive::Session.from_config(scriptDir + "config.json")
+
+# load worksheet objects
+wsBillingData = session.spreadsheet_by_key("1gGSCURCWTbMrI9_KxhAhxJcIqxdvtSurYK9CRFo3EBY").worksheets[0]
+#wsBillingData = session.spreadsheet_by_key("1iDMtFdJwUtvftNmiqoaRV6jXoUcmEJbZm5JNhnjMNqU").worksheets[0]
+wsOveragesOutput = session.spreadsheet_by_key("1sjtzRll9kBb-hDtgGPWzCvYLxy9Ikd_tKbjSNM2Fgo4").worksheets[0]  # Detailed output
+wsOveragesOutputSimple = session.spreadsheet_by_key("1lxNXzB1sV3Ccm4nz0E9pVRjGAV9sie-5Rt_DF-YDhFw").worksheets[0]  # Simple output
+wsOveragesOutputMaster = session.spreadsheet_by_key("1bMGM9675r2nw5agqah7Yg-nJ9ZWG8wgUI6fhY9rXSX8").worksheets[0]  # Master output file; Non-editable
+
+wsBillingDataRows = wsBillingData.rows
+# get worksheet rows, minus header row
+wsOveragesOutputRows = wsOveragesOutput.rows[1..wsOveragesOutput.rows.length-1]
+wsOveragesOutputSimpleRows = wsOveragesOutputSimple.rows[1..wsOveragesOutputSimple.rows.length-1]
+wsOveragesOutputMasterRows = wsOveragesOutputMaster.rows[1..wsOveragesOutputMaster.rows.length-1]  # Master output file; Non-editable
+
+# Generate token-billingdate combinations.  These are used to make sure we don't generate output for an overage that was already handled.
+tokenBillingEndDateCombinations = []
+wsOveragesOutputRows.each do |row|
+    token = row[3]
+    billingEndDate = row[5]
+    tokenBillingEndDateCombinations.push [token,billingEndDate] 
+end
+
+# Create output arrays.  "Simple" has a limited number of fields, and is uploaded to the "Simple" worksheet.  "Soon" worksheets are for current billing periods, which are not ready to be billed yet
+amountsDueSimple = []  # => [name,token,lastBillingCycleBegin,lastBillingCycleEnd,kgOverageAmountDue,apiOverageAmountDue,totalAmountDue]
+amountsDue = []  # => [name,token,lastBillingCycleBegin,lastBillingCycleEnd,totalAmountDue,kgAllotment,kgUsage,kgOverage,kgOveragePricePer,kgOverageAmountDue,apiAllotment,apiUsage,apiOverage,apiOveragePricePer,apiOverageAmountDue,proxyMultiplier,billingDay,dqlFacetCount,calls,proxyCalls,enhanceCount,enhanceRefreshCount,websearchCount,searchResults,giCalls]
+amountsDueSoon = []
+amountsDueSoonSimple = []
+
+wsBillingCopyRows = [] # this variable will contain copies of the rows from the CustomBilling worksheet.  The worksheet gets refreshed from this variable (rows are dumped to worksheet).
+
+# The loop below goes through each line of the Custom Billing sheet.  If there is an error, corresponding output lines are deleted from the output worksheets, and the erroneous line
+# is then marked "OK to Delete" for later manual deletion.  If a line does not have an error, it will be used to calculated totals, and add those to the Overage sheets if not already
+# present.
+# If the CustomBilling line has a "Contract End Date" specified and that has passed, the script will make sure all overages up to that date are reported on the Overage sheets, and then mark
+# the CustomBilling line as "OK to Delete".
+wsBillingDataRows[1..wsBillingData.rows.length-1].each do |r|
+    wsBillingCopyRow = r.dup # we do r.dup because r is "frozen" (and uneditable).  We are altering and thenpushing these non-frozen versions of the lines into wsBillingCopyRows below, so they can be edited as needed
+    
+    # Extract variables from Custom Billing Worksheet row
+    company = r[0]
+    name = r[1]
+    email = r[2]
+    token = r[3]
+    contractStartDate = Date.strptime(r[4], '%m/%d/%Y')
+    contractEndDate = r[5].length > 5 ? Date.strptime(r[5], '%m/%d/%Y') : Date.today + 10000  ## this can be modified to use the same logic as contractStartDate, once Sales has filled in all the relevant info.
+    billingTerm = r[6].to_i
+    unless billingTerm > 0
+        wsBillingCopyRows.push wsBillingCopyRow
+        next
+    end
+    kgAllotment = r[7] == "" ? 0 : r[7].gsub(",","").to_i
+    apiAllotment = r[8] == "" ? 0 : r[8].gsub(",","").to_i
+    kgOveragePricePer = r[9] == "" ? 0.0 : r[9].to_f
+    apiOveragePricePer = r[10] == "" ? 0.0 : r[10].to_f
+    proxyMultiplier = r[11] == "" ? 2 : r[11].to_i  # if this value is missing we set it to the default of 2 just so it doesn't screw up any calculations below.  If this is missing then proxyCalls should be 0, and (proxyCalls * multiplier) will also come out to 0.
+    accountMgr = r[12]
+    errorInLine = r[13].strip
+    okToDelete = r[14]
+    scriptNotes = r[15]
+    salesNotes = r[16]
+
+    if errorInLine == "1"  # if a line in CustomBilling is marked "Error", we delete corresponding overages from each overage file in the loop below
+    	tokenBillingEndDateCombinations.delete_if { |tok, endDate| tok == token }  # delete lines from tokenBillingEndDateCombinations if generated by erroneous wsBillingData line
+        [[wsOveragesOutputRows, wsOveragesOutput], [wsOveragesOutputMasterRows, wsOveragesOutputMaster], [wsOveragesOutputSimpleRows, wsOveragesOutputSimple]].each do |pair|
+            overageRows = pair[0]
+            overageOutput = pair[1]
+
+            numCols = 50 # some arbitrarily large number that is bigger than the number of columns on a long overage sheet
+            numOverageRowsInitial = overageRows.length
+
+            overageRows.delete_if { |row| row.include?(token) } # delete all erroneous rows (rows calculated from erroneous line in CustomBilling) from Overage file
+            
+            # wipe out all overage lines (lineNo > 2) in overage sheet (local working copy in memory)
+            i = 1
+            while i <= numOverageRowsInitial
+                j = 1
+                while j < numCols
+                    overageOutput[i+1,j] = ""
+                    j += 1
+                end
+                i += 1
+            end
+            
+            # generate new overage lines (starting at Line 2) in overage sheet (local working copy in memory)
+            overageOutput = dump_to_sheet(overageRows, overageOutput, 2)
+            overageOutput.save() # save the sheet again, to reload below
+        end
+        # reload each overage sheet, now that we have made changes.
+        wsOveragesOutput.reload()
+        wsOveragesOutputSimple.reload()
+        wsOveragesOutputMaster.reload()
+        # reload rows from each overage sheet
+        wsOveragesOutputRows = wsOveragesOutput.rows[1..wsOveragesOutput.rows.length-1]
+        wsOveragesOutputSimpleRows = wsOveragesOutputSimple.rows[1..wsOveragesOutputSimple.rows.length-1]
+        wsOveragesOutputMasterRows = wsOveragesOutputMaster.rows[1..wsOveragesOutputMaster.rows.length-1]
+
+        # Having handled the erroneous line, mark it OK to delete and leave a comment as to why
+        wsBillingCopyRow[14] = "YES"
+        wsBillingCopyRow[15] += ";; #{Date.today.to_s}: line marked OK to delete because there was an error, and the erroneous results were removed from each Overage sheet."
+    else # ELSE, process Account API data and calculate overages for the Custom Billing line.
+        accountApiUrl = "http://api.diffbot.com/v3/account?token=#{token}&days=all"
+        accountDataHash = JSON.parse(Faraday.get(accountApiUrl).body)
+        apiCalls = accountDataHash["apiCalls"]
+    
+        billingCycleDateRanges = []
+    
+        today = Date.today
+        dateCount = contractStartDate
+        # The loop below calculates the date ranges associated with the billing periods that are defined by our "Start Date" and "Billing Term" fields, in the Custom Billing sheet.
+        until dateCount > today  # when this loop ends, billingCycleDateRanges includes the most recent term that has not ended yet
+            billingTermStart = dateCount
+            dateCount = dateCount >> billingTerm # add n months
+            if (contractEndDate.class.to_s == "Date")
+                billingTermEnd = [dateCount - 1, contractEndDate].min
+                unless (billingTermStart > contractEndDate)  ## unless none of the dates falls within the subscription period
+                    billingCycleDateRanges.push (billingTermStart..billingTermEnd).map{ |date| date.strftime("%F") }
+                end
+            else
+                billingTermEnd = dateCount - 1
+                billingCycleDateRanges.push (billingTermStart..billingTermEnd).map{ |date| date.strftime("%F") }
+            end
+        end
+
+        # For the date ranges we have gathered, load appropriate figures from Account API into billingCycleDateRangeData
+        billingCycleDateRangeData = []
+        billingCycleDateRanges.each do |dateArr|
+            billingCycleDateRangeDataTemp = []
+            for day in dateArr
+                thisDay = apiCalls.detect{ |d| d["date"] == day }
+                if thisDay
+                    billingCycleDateRangeDataTemp.push thisDay
+                end
+            end
+            billingCycleDateRangeData.push billingCycleDateRangeDataTemp
+        end
+
+        # Analyze data gathered from Account API, and calculate totals for each billing period we have derived.  Push data into "AmountsDue" variables.
+        counts = []
+        i = 0
+        billingCycleDateRangeData.each do |data|
+        	unless data.length == 0
+                counts[i] = {}
+                counts[i]["dqlFacetCount"] = counts[i]["calls"] = counts[i]["proxyCalls"] = counts[i]["enhanceCount"] = counts[i]["enhanceRefreshCount"] = counts[i]["websearchCount"] = counts[i]["searchResults"] = counts[i]["giCalls"] = 0
+                for d in data
+                    counts[i]["dqlFacetCount"] += d["dqlFacetCount"]
+                    counts[i]["calls"] += d["calls"]
+                    counts[i]["proxyCalls"] += d["proxyCalls"]
+                    counts[i]["enhanceCount"] += d["enhanceCount"]
+                    counts[i]["enhanceRefreshCount"] += d["enhanceRefreshCount"]
+                    counts[i]["websearchCount"] += d["websearchCount"]
+                    counts[i]["searchResults"] += d["searchResults"]
+                    counts[i]["giCalls"] += d["giCalls"]
+                end
+                counts[i]["kgUsage"] = counts[i]["giCalls"] == 0 ? counts[i]["searchResults"] + counts[i]["enhanceCount"] - counts[i]["enhanceRefreshCount"] : 0  # 0 in this case means customer is using GI.  Vish assures me that any user with GI calls > 0 is not a KG user, forever.
+                counts[i]["apiUsage"] = counts[i]["proxyCalls"] * (proxyMultiplier - 1) + counts[i]["calls"]
+        
+                # Calculate overage for KG and API
+                counts[i]["kgOverage"] = [kgAllotment * billingTerm - counts[i]["kgUsage"], 0].min.abs
+                counts[i]["apiOverage"] = [apiAllotment * billingTerm - counts[i]["apiUsage"], 0].min.abs
+        
+                # Calculate amount due for KG and API
+                counts[i]["kgOverageAmountDue"] = counts[i]["kgOverage"] * kgOveragePricePer
+                counts[i]["apiOverageAmountDue"] = counts[i]["apiOverage"] * apiOveragePricePer
+                counts[i]["totalAmountDue"] = (counts[i]["apiOverageAmountDue"] + counts[i]["kgOverageAmountDue"])
+    
+                if counts[i]["totalAmountDue"] != 0
+                    unless tokenBillingEndDateCombinations.include? [token, billingCycleDateRanges[i].last]
+                        if data == billingCycleDateRangeData.last && (Date.today <= Date.strptime(billingCycleDateRanges[i].last, "%Y-%m-%d"))
+                            amountsDueSoon.push [company,name,email,token,billingCycleDateRanges[i].first,billingCycleDateRanges[i].last,counts[i]["totalAmountDue"].round(2).to_s,kgAllotment,counts[i]["kgUsage"],counts[i]["kgOverage"],kgOveragePricePer,counts[i]["kgOverageAmountDue"].round(2).to_s,apiAllotment,counts[i]["apiUsage"],counts[i]["apiOverage"],apiOveragePricePer,counts[i]["apiOverageAmountDue"].round(2).to_s,proxyMultiplier,contractStartDate.to_s,billingTerm,counts[i]["dqlFacetCount"],counts[i]["calls"],counts[i]["proxyCalls"],counts[i]["enhanceCount"],counts[i]["enhanceRefreshCount"],counts[i]["websearchCount"],counts[i]["searchResults"],counts[i]["giCalls"]]
+                            amountsDueSoonSimple.push [company,name,token,billingCycleDateRanges[i].first,billingCycleDateRanges[i].last,counts[i]["kgOverageAmountDue"].round(2).to_s,counts[i]["apiOverageAmountDue"].round(2).to_s,counts[i]["totalAmountDue"].round(2).to_s]
+                        else
+                            amountsDue.push [company,name,email,token,billingCycleDateRanges[i].first,billingCycleDateRanges[i].last,counts[i]["totalAmountDue"].round(2).to_s,kgAllotment,counts[i]["kgUsage"],counts[i]["kgOverage"],kgOveragePricePer,counts[i]["kgOverageAmountDue"].round(2).to_s,apiAllotment,counts[i]["apiUsage"],counts[i]["apiOverage"],apiOveragePricePer,counts[i]["apiOverageAmountDue"].round(2).to_s,proxyMultiplier,contractStartDate.to_s,billingTerm,counts[i]["dqlFacetCount"],counts[i]["calls"],counts[i]["proxyCalls"],counts[i]["enhanceCount"],counts[i]["enhanceRefreshCount"],counts[i]["websearchCount"],counts[i]["searchResults"],counts[i]["giCalls"]]
+                            amountsDueSimple.push [company,name,token,billingCycleDateRanges[i].first,billingCycleDateRanges[i].last,counts[i]["kgOverageAmountDue"].round(2).to_s,counts[i]["apiOverageAmountDue"].round(2).to_s,counts[i]["totalAmountDue"].round(2).to_s]
+                        end
+                    end
+                end
+            end
+            i += 1
+        end
+    
+        # Check for contract end date and determine if it has passed.  If it has, make sure that tokenBillingEndDateCombinations contains the end date (meaning the overage was calculated),
+        # and if so then mark the line "OK to Delete"
+        finished = false
+        if today > contractEndDate
+            i=0
+            counts.compact.each do |c|
+                if c["totalAmountDue"] > 0
+                    if tokenBillingEndDateCombinations.include? [token, billingCycleDateRanges[i].last]
+                        finished = true
+                    end
+                end
+                i += 1
+            end
+        end
+    
+        if finished
+            wsBillingCopyRow[14] = "YES"
+            wsBillingCopyRow[15] += ";; #{Date.today.to_s}: line marked OK to delete because Contract End Date has passed, and all overages are listed on \"Overages\" sheet"
+        end
+    end
+
+    wsBillingCopyRows.push wsBillingCopyRow # push the edited version of each CustomBilling row into wsBillingCopyRows
+end
+
+# refresh wsBillingData and wsBillingDataRows with updated data.
+wsBillingData = dump_to_sheet(wsBillingCopyRows, wsBillingData, 2)
+
+wsBillingData.save()
+wsBillingData.reload()
+wsBillingDataRows = wsBillingData.rows
+
+# Generate new worksheet data and save back to Google Sheets
+wsOveragesOutput = dump_to_sheet(amountsDue, wsOveragesOutput, wsOveragesOutputRows.length + 2)
+wsOveragesOutputSimple = dump_to_sheet(amountsDueSimple, wsOveragesOutputSimple, wsOveragesOutputSimpleRows.length + 2)
+wsOveragesOutputMaster = dump_to_sheet(amountsDue, wsOveragesOutputMaster, wsOveragesOutputMasterRows.length + 2)
+
+wsOveragesOutput.save()
+wsOveragesOutputSimple.save()
+wsOveragesOutputMaster.save()
+
+# Fire off e-mails as needed
+
+amountsDue.each do |a|
+    emailRecipients = ["rick@diffbot.com", "sales@diffbot.com"]
+    emailSubject = "BILLING OVERAGE ALERT -- #{a[5]}-- #{a[0]}/#{a[1]} has an overage."
+    emailBody = "Dear Sales Team,\n\nOn #{a[5]}, #{a[0]}/#{a[1]} (token #{a[3]}) had an overage totalling $#{a[6]}.\n\nMore details can be found at https://docs.google.com/spreadsheets/d/1bMGM9675r2nw5agqah7Yg-nJ9ZWG8wgUI6fhY9rXSX8/edit?usp=sharing\n\nYours Truly,\nDiffbot Sales Calculator" 
+
+    options = { :address              => "smtp.gmail.com",
+                :port                 => 587,
+                :domain               => 'nike.diffbot.com',
+                :user_name            => 'diffbotsalescalculator@gmail.com',
+                :password             => File.read(scriptDir + ".gmailpass").chomp,
+                :authentication       => 'plain',
+                :enable_starttls_auto => true  
+    }
+
+    Mail.defaults do
+        delivery_method :smtp, options
+    end
+
+    Mail.deliver do
+        from    'diffbotsalescalculator@gmail.com'
+        to      emailRecipients.join(", ")
+        subject emailSubject
+        body    emailBody
+    end
+end
+
+
+# Send e-mail to self confirming script completed successfully
+options = { :address              => "smtp.gmail.com",
+            :port                 => 587,
+            :domain               => 'nike.diffbot.com',
+            :user_name            => 'diffbotsalescalculator@gmail.com',
+            :password             => File.read(scriptDir + ".gmailpass").chomp,
+            :authentication       => 'plain',
+            :enable_starttls_auto => true
+}
+Mail.defaults do
+    delivery_method :smtp, options
+end
+Mail.deliver do
+    from    'diffbotsalescalculator@gmail.com'
+    to      "rick@diffbot.com"
+    subject "sales-overage-calculator Finished Successfully"
+    body    "Hello Rick,\n\nThe sales-overage-calculator script on nike.diffbot.com has completed successfully."
+end
+
+
+
+#### DO SOMETHING HERE WITH AmountsDueSoon and AmountsDueSoonSimple (talk to Aron and ask what he wants; these are running total overages for current billing period)
+

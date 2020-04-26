@@ -1,0 +1,63 @@
+{% extends "tools/base.html" %}
+{% import 'macros.html' as macros %}
+{%block title%}Manage Plans{%endblock%}
+
+{% block content %}
+
+{# HEADER #}
+<div class="row" id="top">
+    <header class="col-md-12">
+    <a href="/tools">Tools</a> > Manage Plans
+    </header>
+    <div class="col-xs-12"><p>Manage the various subscription plans available, and their associated terms.</p></div>
+</div>
+
+<hr style="height: 1px; background-color:#555; margin-top: 20px; margin-bottom: 20px; width: 90%;" />
+
+{# MODIFY_PLANS_FORM #}
+<h2 class="title">Modify Plans</h2>
+<form method="POST" action="/tools/modifyplan" id="db_post" name="db_post" class="form-inline" style="margin-top: 20px;">
+    {{ form1.hidden_tag() }}
+    {% for field in form1 if field.widget.input_type != 'hidden' %}
+        {{ field.label() }}
+        {{ field() }}
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<hr style="height: 1px; background-color:#555; margin-top: 20px; margin-bottom: 20px; width: 90%;" />
+
+{# CREATE_PLAN_FORM #}
+<h2 class="title">Create a New Plan</h2>
+<div class="container" style="">
+    <form method="POST" action="/tools/modifyplan" id="db_post" name="db_post" class="form-inline" style="margin-top: 20px;">
+        {{ form2.hidden_tag() }}
+        {% for field in form2 if field.widget.input_type != 'hidden' %}
+            {{ field() }}
+            {{ field.label(style="display:inline-block; width:50%; align:left") }}
+            <br>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary" style="margin-top:10px;">Submit</button>
+    </form>
+</div>
+
+<hr style="height: 1px; background-color:#555; margin-top: 20px; margin-bottom: 20px; width: 90%;" />
+
+{# PLANS_TABLE #}
+<table style="border: 1px solid black; margin-top: 20px">
+  <TR style="border: 1px solid black;">
+      {% for item in field_names %}
+      <TH style="border: 1px solid black; padding: 2px">{{item}}</TH>
+      {% endfor %}
+  </TR>
+  {% for plan in plans %}
+  <TR style="border: 1px solid black;">
+      {% for item in plan %}
+      <TD style="border: 1px solid black; padding: 2px"><SPAN>{{item|string}}</SPAN></TD>
+      {% endfor %}
+  </TR>
+  {% endfor %}
+</table>
+
+
+{% endblock %}

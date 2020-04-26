@@ -1,0 +1,44 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /scripts/sales-overage-calculator
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /scripts/SLACK_ROLES
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing3
+> git rev-parse --symbolic-full-name rick_testing3@{u}
+fatal: no upstream configured for branch 'rick_testing3'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git check-ignore -v -z --stdin
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /root/docs
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse docs-collab
+> git rev-parse --symbolic-full-name docs-collab@{u}
+> git rev-list --left-right docs-collab...refs/remotes/origin/docs-collab
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :docs/api-account.md
+> git check-ignore -v -z --stdin
+> git show :docs/kg-enhance.md
+> git check-ignore -v -z --stdin
+> git show :docs/api-account.md

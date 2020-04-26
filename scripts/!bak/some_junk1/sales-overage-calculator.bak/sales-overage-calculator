@@ -1,0 +1,196 @@
+#!/usr/bin/ruby
+
+require "google_drive"
+require "faraday"
+require "json"
+require "date"
+require "mail"
+
+scriptDir = "/scripts/sales-overage-calculator/"
+
+# Create a Google Drive Session
+session = GoogleDrive::Session.from_config(scriptDir + "config.json")
+
+# grab/generate worksheet objects
+wsBillingData = session.spreadsheet_by_key("1gGSCURCWTbMrI9_KxhAhxJcIqxdvtSurYK9CRFo3EBY").worksheets[0]
+wsOveragesOutput = session.spreadsheet_by_key("1sjtzRll9kBb-hDtgGPWzCvYLxy9Ikd_tKbjSNM2Fgo4").worksheets[0]  # Detailed output
+wsOveragesOutputSimple = session.spreadsheet_by_key("1lxNXzB1sV3Ccm4nz0E9pVRjGAV9sie-5Rt_DF-YDhFw").worksheets[0]  # Simple output
+wsOveragesOutputMaster = session.spreadsheet_by_key("1bMGM9675r2nw5agqah7Yg-nJ9ZWG8wgUI6fhY9rXSX8").worksheets[0]  # Master output file; Non-editable
+
+# get worksheet rows, minus header row
+wsBillingDataRows = wsBillingData.rows[1..wsBillingData.rows.length-1]
+wsOveragesOutputRows = wsOveragesOutput.rows[1..wsBillingData.rows.length-1]
+wsOveragesOutputSimpleRows = wsOveragesOutputSimple.rows[1..wsBillingData.rows.length-1]
+wsOveragesOutputMasterRows = wsOveragesOutputMaster.rows[1..wsBillingData.rows.length-1]  # Master output file; Non-editable
+
+# Generate token-billingdate combinations.  These are used to make sure we don't generate output for an overage that was already handled.
+tokenBillingEndDateCombinations = []
+wsOveragesOutputMasterRows.each do |row|
+	token = row[1]
+	billingEndDate = row[3]
+	tokenBillingEndDateCombinations.push [token,billingEndDate]
+end
+
+# Create two output arrays.  "Simple" has a limited number of fields, and is uploaded to the "Simple" worksheet
+amountsDueSimple = []  # => [name,token,lastBillingCycleBegin,lastBillingCycleEnd,kgOverageAmountDue,apiOverageAmountDue,totalAmountDue]
+amountsDue = []  # => [name,token,lastBillingCycleBegin,lastBillingCycleEnd,totalAmountDue,kgAllotment,kgUsage,kgOverage,kgOveragePricePer,kgOverageAmountDue,apiAllotment,apiUsage,apiOverage,apiOveragePricePer,apiOverageAmountDue,proxyMultiplier,billingDay,dqlFacetCount,calls,proxyCalls,enhanceCount,enhanceRefreshCount,websearchCount,searchResults,giCalls]
+
+# Extract data from "BillingData" worksheet, and use it with Account API data to calculate overages
+wsBillingDataRows.each do |r|
+	name = r[0]
+	token = r[1]
+	billingDay = r[2].to_i 
+	kgAllotment = r[3].to_i
+	apiAllotment = r[4].to_i
+    kgOveragePricePer = r[5].to_f
+    apiOveragePricePer = r[6].to_f
+    proxyMultiplier = r[7].to_i
+
+    # make a call to Account API, store result as a Hash
+    accountApiUrl = "http://api.diffbot.com/v3/account?token=#{token}&days=all"
+    accountDataHash = JSON.parse(Faraday.get(accountApiUrl).body)
+
+    apiCalls = accountDataHash["apiCalls"]
+
+    # Get usage totals for KG and API
+    today = Date.today
+    thisMonthBillingDate = today - today.mday + billingDay
+
+    lastBillingCycleEnd = today < thisMonthBillingDate ? thisMonthBillingDate.prev_month : thisMonthBillingDate  # WE HAVE NOT VERIFIED THAT THIS ALL WORKS AFTER 9/30 (month flip over)
+    lastBillingCycleBegin = lastBillingCycleEnd.prev_month
+
+    lastBillingCycleRange = (lastBillingCycleBegin.to_date...lastBillingCycleEnd.to_date).map{ |date| date.strftime("%F")}
+
+    billingDaysDataArray = []
+
+    for i in lastBillingCycleRange # iterate over days
+        thisDay = apiCalls.detect{ |d| d["date"] == i }
+        billingDaysDataArray.push thisDay
+    end
+
+    dqlFacetCount = calls = proxyCalls = enhanceCount = enhanceRefreshCount = websearchCount = searchResults = giCalls = 0
+    for i in billingDaysDataArray
+        dqlFacetCount += i["dqlFacetCount"]
+        calls += i["calls"]
+        proxyCalls += i["proxyCalls"]
+        enhanceCount += i["enhanceCount"]
+        enhanceRefreshCount += i["enhanceRefreshCount"]
+        websearchCount += i["websearchCount"]
+        searchResults += i["searchResults"]
+        giCalls += i["giCalls"]
+    end
+
+=begin
+        Some comment on the usage of each Account API response field is indicated here.  This info should be reviewed periodically, as some of the current 
+          accounting of calls by our APIs do not make total sense, and these things might be fixed at a later date.
+
+        "dqlFacetCount": We are ignoring this for now because there is no billing criteria associated with it at this time.
+        "calls": This is the total number of calls, including proxy calls.  Because this includes proxy calls (with a multiplier of 1), we must multiply
+          the number of proxy calls by (proxyMultiplier - 1), and add the result to "calls" to get the total API usage.  In other words, if the multiplier 
+          is 2, we will add `proxyCalls*(2-1)=proxyCalls` to the "calls" field to get the number of API calls consumed.
+        "proxyCalls": This is the number of proxied API calls made.  Important to note that every time this is incremented, "calls" is also incremented.
+        "enhanceCount": This is the number of entities returned by Enhance.  For each query this is incremented either 0 or 1 times (since Enhance only 
+          returns up to 1 result).  Each of these counts as a KG call, so we add this to searchResults.
+        "enhanceRefreshCount": This is the number of entities that were Refreshed via Enhance.  Every time this is incremented by 1, "enhanceCount" is also 
+          incremented by 1. For this reason, we must subtract this value from "enhanceCount" to get the correct number of Enhance entities returned.  Currently 
+          billing for Refresh is not accounted for.  When that changes, Refreshes will be treated separately.
+        "websearchCount": Kris seemed to feel this was the number of KG queries initiated from the dashboard UI.  Praveen and Jing did not know what this was, but 
+          Jing confirmed (by testing) that a UI query to the KG does not increment this field (but does affect the "searchResults" field).
+        "searchResults": The number of KG entities returned (not related to Enhance operations)
+        "giCalls": The number of GI calls.  Vish has informed that nobody using this will be using KG, so if "giCalls" is not zero, we ignore the searchResults 
+          field (because searchResults is incremented when giCalls is incremented, but the multiplier is unclear).  Vish has confirmed that nobody with a custom 
+          contract uses GI.  WE ARE IGNORING THIS FIELD SINCE NO CUSTOM CONTRACT CURRENTLY USES GI
+=end
+    # Calculate usage for KG and API
+    kgUsage = giCalls == 0 ? searchResults + enhanceCount - enhanceRefreshCount : "n/a (customer is using GI)"
+    apiUsage = proxyCalls * (proxyMultiplier - 1) + calls
+
+    # Calculate overage for KG and API
+    kgOverage = [kgAllotment - kgUsage, 0].min.abs
+    apiOverage = [apiAllotment - apiUsage, 0].min.abs
+
+    # Calculate amount due for KG and API
+    kgOverageAmountDue = kgOverage * kgOveragePricePer
+    apiOverageAmountDue = apiOverage * apiOveragePricePer
+    totalAmountDue = apiOverageAmountDue + kgOverageAmountDue
+    kgOverageAmountDue = kgOverageAmountDue.round(2).to_s
+    apiOverageAmountDue = apiOverageAmountDue.round(2).to_s
+    totalAmountDue = totalAmountDue.round(2).to_s
+
+    if totalAmountDue != 0
+    	unless tokenBillingEndDateCombinations.include? [token, lastBillingCycleEnd.strftime("%F")]  ######################################
+    	    amountsDue.push [name,token,lastBillingCycleBegin.strftime("%F"),lastBillingCycleEnd.strftime("%F"),totalAmountDue,kgAllotment,kgUsage,kgOverage,kgOveragePricePer,kgOverageAmountDue,apiAllotment,apiUsage,apiOverage,apiOveragePricePer,apiOverageAmountDue,proxyMultiplier,billingDay,dqlFacetCount,calls,proxyCalls,enhanceCount,enhanceRefreshCount,websearchCount,searchResults,giCalls]
+    	    amountsDueSimple.push [name,token,lastBillingCycleBegin.strftime("%F"),lastBillingCycleEnd.strftime("%F"),kgOverageAmountDue,apiOverageAmountDue,totalAmountDue]
+    	end
+    end
+end
+
+# Generate new worksheet data and save back to Google Sheets
+numRows = wsOveragesOutputRows.length
+nextRow = numRows + 2
+i = nextRow # for clarity
+for entry in amountsDue
+	j = 1
+	for item in entry
+		wsOveragesOutput[i,j] = item.to_s
+		j += 1
+	end
+	i += 1
+end
+
+numRows = wsOveragesOutputSimpleRows.length
+nextRow = numRows + 2
+i = nextRow # for clarity
+for entry in amountsDueSimple
+	j = 1
+	for item in entry
+		wsOveragesOutputSimple[i,j] = item.to_s
+		j += 1
+	end
+	i += 1
+end
+
+numRows = wsOveragesOutputMasterRows.length
+nextRow = numRows + 2
+i = nextRow # for clarity
+for entry in amountsDue
+	j = 1
+	for item in entry
+		wsOveragesOutputMaster[i,j] = item.to_s
+		j += 1
+	end
+	i += 1
+end
+
+wsOveragesOutput.save()
+wsOveragesOutputSimple.save()
+wsOveragesOutputMaster.save()
+
+# Fire off e-mails as needed
+
+
+amountsDue.each do |a|
+	emailRecipients = ["rick@diffbot.com", "aron@diffbot.com", "vish@diffbot.com", "juan@diffbot.com", "jason@diffbot.com"]
+    emailSubject = "BILLING OVERAGE ALERT -- #{a[3]}-- #{a[0]} has an overage."
+	emailBody = "Dear Sales Team,\n\nOn #{a[3]}, #{a[0]} had an overage totalling $#{a[4]}.\n\nMore details can be found at https://docs.google.com/spreadsheets/d/1bMGM9675r2nw5agqah7Yg-nJ9ZWG8wgUI6fhY9rXSX8/edit?usp=sharing\n\nYours Truly,\nDiffbot Sales Calculator" 
+
+    options = { :address              => "smtp.gmail.com",
+                :port                 => 587,
+                :domain               => 'nike.diffbot.com',
+                :user_name            => 'diffbotsalescalculator@gmail.com',
+                :password             => File.read(scriptDir + ".gmailpass").chomp,
+                :authentication       => 'plain',
+                :enable_starttls_auto => true  
+    }
+
+    Mail.defaults do
+        delivery_method :smtp, options
+    end
+
+    Mail.deliver do
+        from    'diffbotsalescalculator@gmail.com'
+        to      emailRecipients.join(", ")
+        subject emailSubject
+        body    emailBody
+    end
+end

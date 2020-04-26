@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+chgrp www-data var/www/slack-kg-integration
+chmod ug=rX var/www/slack-kg-integration

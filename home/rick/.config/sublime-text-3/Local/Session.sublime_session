@@ -1,0 +1,1508 @@
+{
+	"folder_history":
+	[
+		"/scripts/!oneoff/dev-docs-migrate/docs"
+	],
+	"last_version": 3211,
+	"last_window_id": 2,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 480.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"days",
+						"daysUntilRenew"
+					],
+					[
+						"contrac",
+						"contractEndDate"
+					],
+					[
+						"ws",
+						"wsOveragesOutputRows"
+					],
+					[
+						"wsO",
+						"wsOveragesOutput"
+					],
+					[
+						"wsBil",
+						"wsBillingCopyRows"
+					],
+					[
+						"she",
+						"sheetVar"
+					],
+					[
+						"wsOver",
+						"wsOveragesOutput"
+					],
+					[
+						"wsB",
+						"wsBillingCopyRow"
+					],
+					[
+						"wsBilling",
+						"wsBillingCopyRows"
+					],
+					[
+						"wsOve",
+						"wsOveragesOutput"
+					],
+					[
+						"wsBillin",
+						"wsBillingData"
+					],
+					[
+						"customBilling",
+						"customBillingRowCopies"
+					],
+					[
+						"custo",
+						"customBillingRowCopies"
+					],
+					[
+						"custom",
+						"customBillingRowCopy"
+					],
+					[
+						"wsOverages",
+						"wsOveragesOutputSimple"
+					],
+					[
+						"err",
+						"errorInLine"
+					],
+					[
+						"contra",
+						"contractEndDate"
+					],
+					[
+						"contract",
+						"contractEndDate"
+					],
+					[
+						"contr",
+						"contractEndDate"
+					],
+					[
+						"amountsDue",
+						"amountsDueSoonSimple"
+					],
+					[
+						"amountsDueS",
+						"amountsDueSoon"
+					],
+					[
+						"billingC",
+						"billingCycleDateRangeData"
+					],
+					[
+						"wsb",
+						"wsBillingDataRows"
+					],
+					[
+						"billingCycleDate",
+						"billingCycleDateRanges"
+					],
+					[
+						"billing",
+						"billingCycleDateRangeData"
+					],
+					[
+						"thisBil",
+						"thisBillingCycleBegin"
+					],
+					[
+						"thisB",
+						"thisBillingCycleBegin"
+					],
+					[
+						"last",
+						"lastBillingCycleBegin"
+					],
+					[
+						"thisBillin",
+						"thisBillingCycleEnd"
+					],
+					[
+						"kgO",
+						"kgOverageAmountDue"
+					],
+					[
+						"enha",
+						"enhanceRefreshCount"
+					],
+					[
+						"proxy",
+						"proxyMultiplier"
+					],
+					[
+						"kg",
+						"kgOveragePricePer"
+					],
+					[
+						"acc",
+						"accountMgrEmail"
+					],
+					[
+						"accou",
+						"accountMgrName"
+					],
+					[
+						"con",
+						"contractStartDate"
+					],
+					[
+						"script",
+						"scriptDir"
+					],
+					[
+						"email",
+						"emailRecipients"
+					],
+					[
+						"kgOv",
+						"kgOverageAmountDue"
+					],
+					[
+						"tok",
+						"token"
+					],
+					[
+						"token",
+						"tokenBillingEndDateCombinations"
+					],
+					[
+						"total",
+						"totalAmountDue"
+					],
+					[
+						"amount",
+						"amountsDueSimple"
+					],
+					[
+						"apiO",
+						"apiOverageAmountDue"
+					],
+					[
+						"amou",
+						"amountsDue"
+					],
+					[
+						"api",
+						"apiOveragePricePer"
+					],
+					[
+						"gi",
+						"giCalls"
+					],
+					[
+						"en",
+						"enhanceRefreshCount"
+					],
+					[
+						"pr",
+						"proxyCalls"
+					],
+					[
+						"billin",
+						"billingDaysDataArray"
+					],
+					[
+						"account",
+						"accountDataHash"
+					],
+					[
+						"lastB",
+						"lastBillingCycleRange"
+					],
+					[
+						"this",
+						"thisMonthBillingDate"
+					],
+					[
+						"col",
+						"colorbar"
+					],
+					[
+						"dis",
+						"displayNextButton"
+					],
+					[
+						"displ",
+						"displayNextButton"
+					],
+					[
+						"tr",
+						"trigger_id"
+					],
+					[
+						"num",
+						"numToDisplay"
+					],
+					[
+						"respon",
+						"response_url"
+					],
+					[
+						"empl",
+						"employmentDateString"
+					],
+					[
+						"oau",
+						"oauthToken"
+					],
+					[
+						"gene",
+						"generate_blocks_video"
+					],
+					[
+						"gener",
+						"generate_blocks_discussion"
+					],
+					[
+						"generate_blocks_i",
+						"generate_blocks_image"
+					],
+					[
+						"Empl",
+						"EmploymentCategory"
+					],
+					[
+						"Educ",
+						"EducationMajorEntity"
+					],
+					[
+						"major",
+						"majorAndProgramString"
+					],
+					[
+						"ins",
+						"institution"
+					],
+					[
+						"home",
+						"homepageUri"
+					],
+					[
+						"employmen",
+						"employmentDateString"
+					],
+					[
+						"employm",
+						"employmentEmployer"
+					],
+					[
+						"employme",
+						"employmentTitle"
+					],
+					[
+						"emplo",
+						"employmentDateString"
+					],
+					[
+						"eml",
+						"employmentDateString"
+					],
+					[
+						"employ",
+						"employedFrom"
+					],
+					[
+						"is",
+						"isCurrent"
+					],
+					[
+						"diff",
+						"diffbotUri"
+					],
+					[
+						"re",
+						"revenueCurrencySymbol"
+					],
+					[
+						"pl",
+						"plain_text"
+					],
+					[
+						"diffbo",
+						"diffbotUri"
+					],
+					[
+						"lan",
+						"languages"
+					],
+					[
+						"fou",
+						"foundingDateString"
+					],
+					[
+						"nb",
+						"nbEmployeesString"
+					],
+					[
+						"revenu",
+						"revenueString"
+					],
+					[
+						"un",
+						"unfurls"
+					],
+					[
+						"thre",
+						"threadBeganString"
+					],
+					[
+						"nat",
+						"naturalHeight"
+					],
+					[
+						"title",
+						"titleize"
+					],
+					[
+						"nbE",
+						"nbEmployeesMax"
+					],
+					[
+						"he",
+						"header"
+					],
+					[
+						"to",
+						"to_json"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/rick/docs/docs/api-article.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-article.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-analyze.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-article-html.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-image.md",
+				"/root/dashboard/diffbot_dashboard/views/custom_api.py",
+				"/root/dashboard/diffbot_dashboard/forms/custom_api.py.bak",
+				"/scripts/sales-overage-calculator/sales-overage-calculator",
+				"/scripts/sales-renewal-alerts/sales-renewal-alerts",
+				"/scripts/sales-overage-calculator/sales-overage-calculator.production",
+				"/home/rick/docs/docs/api-analyze.md",
+				"/scripts/!oneoff/dev-docs-migrate/check_links_images.rb",
+				"/scripts/slack-diffbot/slack-message-receiver",
+				"/scripts/dev-docs-migrate/3.rb",
+				"/scripts/dev-docs-migrate/oneoff_to_get_suffixes.rb",
+				"/scripts/dev-docs-migrate/check_links_images.rb",
+				"/scripts/dev-docs-migrate/temp/images.txt",
+				"/scripts/dev-docs-migrate/temp/links.txt",
+				"/scripts/dev-docs-migrate/extract_support_page_data_DONE.rb",
+				"/scripts/dev-docs-migrate/temp/urls_with_titles.txt",
+				"/scripts/support-docs-migrate/extract_support_page_data_DONE.rb",
+				"/scripts/support-docs-migrate/temp/individual_articles.txt",
+				"/scripts/support-docs-migrate/3.rb",
+				"/scripts/support-docs-migrate/temp/support_urls_consolidated.txt",
+				"/scripts/support-docs-migrate/temp/support_docs.csv",
+				"/scripts/support-docs-migrate/oneoff_to_get_suffixes.rb",
+				"/scripts/support-docs-migrate/temp/suffixes.txt",
+				"/scripts/sales-overage-calculator/REFACTOR_sales-overage-calculator.rb",
+				"/scripts/slack-diffbot/slack-message-handler",
+				"/scripts/sales-overage-calculator/sales2.rb",
+				"/scripts/sales-overage-calculator/quickstart.rb",
+				"/usr/lib/cgi-bin/slack-message-handler",
+				"/usr/lib/cgi-bin/slack-message-receiver",
+				"/usr/lib/cgi-bin/slack-message-handler.rb",
+				"/temp/blocks2",
+				"/temp/request",
+				"/temp/blocks",
+				"/scripts/slack-diffbot-integration/slack-message-receiver",
+				"/scripts/slack-diffbot-revert/slack-diffbot-integration/slack-message-receiver"
+			],
+			"find":
+			{
+				"height": 26.0
+			},
+			"find_in_files":
+			{
+				"height": 101.0,
+				"where_history":
+				[
+					""
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"api_types",
+					"image",
+					"scriptd",
+					"puts",
+					"end",
+					", ",
+					"type_to",
+					"pagety",
+					"http",
+					"json",
+					"[i",
+					"support_section_urls",
+					"\\/$",
+					"strf",
+					"r[",
+					"wsOveragesOutputMasterRows",
+					"reloa",
+					"wsoveragesoutputro",
+					"tokenb",
+					"yes",
+					"wsbil",
+					"[wsOveragesOutputRows, wsOveragesOutput]",
+					"\"r.frozen?\"",
+					"contracten",
+					"contractEndDate",
+					"counts[0]",
+					"counts[i]",
+					"\\t",
+					"overagesm",
+					"token-",
+					"rows",
+					"color",
+					"this_scr",
+					"chat_un",
+					"data, blocks, position = 0",
+					"this_",
+					"color",
+					"block = ",
+					"entityid =",
+					"data, blocks",
+					"generation_options",
+					"generate_layout",
+					"respon",
+					"entityid",
+					"data, entityId,",
+					"generate_blocks",
+					"entityid",
+					"tags",
+					"/time",
+					"conn",
+					"params_h",
+					"kg.di",
+					"class",
+					"employedTo",
+					"oautht",
+					"diffbotto",
+					"((data, entityId, blocks))",
+					"((data",
+					"((data, entityId, blocks))",
+					"(data, blocks)",
+					"entityid",
+					"diffbottok",
+					"parse",
+					"^\\s+when.+$",
+					"newur",
+					"diffbottoke",
+					"/temp",
+					"blocks2",
+					"categ",
+					"crunchb",
+					"wiki",
+					"/",
+					"/temp",
+					"snake",
+					"filet",
+					"u[",
+					"block3",
+					"block2",
+					"block1",
+					"hash",
+					"\n                hash1 = {}\n                hash1[\"type\"] = \"context\"\n                hash1[\"elements\"] = []\n                hash1[\"elements\"][0] = {}\n                hash1[\"elements\"][0][\"type\"] = \"image\"\n                hash1[\"elements\"][0][\"image_url\"] = \"https://cdn1.iconfinder.com/data/icons/building-and-tower/512/4-512.png\"\n                hash1[\"elements\"][0][\"alt_text\"] = \"Article\"\n                hash1[\"elements\"][1] = {}\n                hash1[\"elements\"][1][\"type\"] = \"mrkdwn\"\n                hash1[\"elements\"][1][\"text\"] = \"*Gates Corporation* :snake:  (<http://www.gates.com|gates.com>)\\nDenver, Colorado\"\n                hash2 = {\"type\" => \"divider\"}\n                hash3 = { \"type\": \"section\"}\n                hash3[\"text\"] = {}\n                hash3[\"text\"][\"type\"] = \"mrkdwn\"\n                hash3[\"text\"][\"text\"] = \"<http://somesite.com|JSON>\"\n                blocks.push hash1\n                blocks.push hash2\n                blocks.push hash3\n",
+					"file.wri",
+					"unfurlJson",
+					"revenueString",
+					"address",
+					"1000",
+					"  = ",
+					"  (given in km2)",
+					" (links side-by-side)",
+					"  (usually gives city/state)",
+					"[0]\"]",
+					" (links side by side)",
+					"yearlyRevenues[0][\"revenue\"][\"value\"] = data[\"yearlyRevenues[0][\"revenue\"][\"value\"]\"]",
+					"yearlyRevenues[0][\"revenue\"][\"currency\"] = data[\"yearlyRevenues[0][\"revenue\"][\"currency\"]\"]",
+					"categories[n][\"name\"] = data[\"categories[n]\"][\"name\"]",
+					"images[0][\"url\"] = data[\"images[0][\"url\"]]",
+					"images[0][\"naturalHeight\"] = data[\"images[0][\"naturalHeight\"]\"]",
+					"images[0][\"naturalWidth\"] = data[\"images[0][\"naturalWidth\"]\"]",
+					"images[0][\"url\"] = data[\"images[0][\"url\"]\"]",
+					"date[\"timestamp\"] = data[\"date[\"timestamp\"]\"]",
+					"] (with links)",
+					" (must be converted)",
+					" (format)",
+					" (use to derive a range)",
+					" (gives city/state)",
+					"Uri \"]",
+					" (grab first 5; make it expandable)",
+					" (grab first 5; make it expandable)\"",
+					"”",
+					"“",
+					"tokenfil",
+					"id"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": true,
+				"replace_history":
+				[
+					"\\n",
+					"support_urls_consolidated",
+					"",
+					"a[",
+					"r.frozen?.to_s",
+					"counts[i]",
+					"counts[0]",
+					"    ",
+					"dataArray, blocks, position = 0",
+					"generate_options",
+					"generation_options",
+					"data,",
+					"generate_layout",
+					"(data, entityId, blocks)",
+					"(data",
+					"(data, entityId, blocks)",
+					"blocks[3]",
+					"blocks[2]",
+					"blocks[1]",
+					"block",
+					"hash1 = {}\n                hash1[\"type\"] = \"context\"\n                hash1[\"elements\"] = []\n                hash1[\"elements\"][0] = {}\n                hash1[\"elements\"][0][\"type\"] = \"image\"\n                hash1[\"elements\"][0][\"image_url\"] = \"https://cdn1.iconfinder.com/data/icons/building-and-tower/512/4-512.png\"\n                hash1[\"elements\"][0][\"alt_text\"] = \"Article\"\n                hash1[\"elements\"][1] = {}\n                hash1[\"elements\"][1][\"type\"] = \"mrkdwn\"\n                hash1[\"elements\"][1][\"text\"] = \"*Gates Corporation* :snake:  (<http://www.gates.com|gates.com>)\\nDenver, Colorado\"\n                hash2 = {\"type\" => \"divider\"}\n                hash3 = { \"type\": \"section\"}\n                hash3[\"text\"] = {}\n                hash3[\"text\"][\"type\"] = \"mrkdwn\"\n                hash3[\"text\"][\"text\"] = \"<http://somesite.com|JSON>\"\n                blocks.push hash1\n                blocks.push hash2\n                blocks.push hash3",
+					" = ",
+					"",
+					"\"][0]",
+					"",
+					"revenue = data[\"yearlyRevenues[0]\"][\"revenue\"][\"value\"]",
+					"revenueCurrency = data[\"yearlyRevenues[0]\"][\"revenue\"][\"currency\"]",
+					"categories = data[\"categories\"]",
+					"img = images[0]",
+					"",
+					"img = images[0]",
+					"timestamp = data[\"date\"][\"timestamp\"]",
+					"]",
+					"",
+					"Uri\"]",
+					"",
+					"\""
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 26.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 48.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 392.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"",
+						"authorize"
+					]
+				],
+				"width": 592.0
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 640.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"days",
+						"daysUntilRenew"
+					],
+					[
+						"contrac",
+						"contractEndDate"
+					],
+					[
+						"ws",
+						"wsOveragesOutputRows"
+					],
+					[
+						"wsO",
+						"wsOveragesOutput"
+					],
+					[
+						"wsBil",
+						"wsBillingCopyRows"
+					],
+					[
+						"she",
+						"sheetVar"
+					],
+					[
+						"wsOver",
+						"wsOveragesOutput"
+					],
+					[
+						"wsB",
+						"wsBillingCopyRow"
+					],
+					[
+						"wsBilling",
+						"wsBillingCopyRows"
+					],
+					[
+						"wsOve",
+						"wsOveragesOutput"
+					],
+					[
+						"wsBillin",
+						"wsBillingData"
+					],
+					[
+						"customBilling",
+						"customBillingRowCopies"
+					],
+					[
+						"custo",
+						"customBillingRowCopies"
+					],
+					[
+						"custom",
+						"customBillingRowCopy"
+					],
+					[
+						"wsOverages",
+						"wsOveragesOutputSimple"
+					],
+					[
+						"err",
+						"errorInLine"
+					],
+					[
+						"contra",
+						"contractEndDate"
+					],
+					[
+						"contract",
+						"contractEndDate"
+					],
+					[
+						"contr",
+						"contractEndDate"
+					],
+					[
+						"amountsDue",
+						"amountsDueSoonSimple"
+					],
+					[
+						"amountsDueS",
+						"amountsDueSoon"
+					],
+					[
+						"billingC",
+						"billingCycleDateRangeData"
+					],
+					[
+						"wsb",
+						"wsBillingDataRows"
+					],
+					[
+						"billingCycleDate",
+						"billingCycleDateRanges"
+					],
+					[
+						"billing",
+						"billingCycleDateRangeData"
+					],
+					[
+						"thisBil",
+						"thisBillingCycleBegin"
+					],
+					[
+						"thisB",
+						"thisBillingCycleBegin"
+					],
+					[
+						"last",
+						"lastBillingCycleBegin"
+					],
+					[
+						"thisBillin",
+						"thisBillingCycleEnd"
+					],
+					[
+						"kgO",
+						"kgOverageAmountDue"
+					],
+					[
+						"enha",
+						"enhanceRefreshCount"
+					],
+					[
+						"proxy",
+						"proxyMultiplier"
+					],
+					[
+						"kg",
+						"kgOveragePricePer"
+					],
+					[
+						"acc",
+						"accountMgrEmail"
+					],
+					[
+						"accou",
+						"accountMgrName"
+					],
+					[
+						"con",
+						"contractStartDate"
+					],
+					[
+						"script",
+						"scriptDir"
+					],
+					[
+						"email",
+						"emailRecipients"
+					],
+					[
+						"kgOv",
+						"kgOverageAmountDue"
+					],
+					[
+						"tok",
+						"token"
+					],
+					[
+						"token",
+						"tokenBillingEndDateCombinations"
+					],
+					[
+						"total",
+						"totalAmountDue"
+					],
+					[
+						"amount",
+						"amountsDueSimple"
+					],
+					[
+						"apiO",
+						"apiOverageAmountDue"
+					],
+					[
+						"amou",
+						"amountsDue"
+					],
+					[
+						"api",
+						"apiOveragePricePer"
+					],
+					[
+						"gi",
+						"giCalls"
+					],
+					[
+						"en",
+						"enhanceRefreshCount"
+					],
+					[
+						"pr",
+						"proxyCalls"
+					],
+					[
+						"billin",
+						"billingDaysDataArray"
+					],
+					[
+						"account",
+						"accountDataHash"
+					],
+					[
+						"lastB",
+						"lastBillingCycleRange"
+					],
+					[
+						"this",
+						"thisMonthBillingDate"
+					],
+					[
+						"col",
+						"colorbar"
+					],
+					[
+						"dis",
+						"displayNextButton"
+					],
+					[
+						"displ",
+						"displayNextButton"
+					],
+					[
+						"tr",
+						"trigger_id"
+					],
+					[
+						"num",
+						"numToDisplay"
+					],
+					[
+						"respon",
+						"response_url"
+					],
+					[
+						"empl",
+						"employmentDateString"
+					],
+					[
+						"oau",
+						"oauthToken"
+					],
+					[
+						"gene",
+						"generate_blocks_video"
+					],
+					[
+						"gener",
+						"generate_blocks_discussion"
+					],
+					[
+						"generate_blocks_i",
+						"generate_blocks_image"
+					],
+					[
+						"Empl",
+						"EmploymentCategory"
+					],
+					[
+						"Educ",
+						"EducationMajorEntity"
+					],
+					[
+						"major",
+						"majorAndProgramString"
+					],
+					[
+						"ins",
+						"institution"
+					],
+					[
+						"home",
+						"homepageUri"
+					],
+					[
+						"employmen",
+						"employmentDateString"
+					],
+					[
+						"employm",
+						"employmentEmployer"
+					],
+					[
+						"employme",
+						"employmentTitle"
+					],
+					[
+						"emplo",
+						"employmentDateString"
+					],
+					[
+						"eml",
+						"employmentDateString"
+					],
+					[
+						"employ",
+						"employedFrom"
+					],
+					[
+						"is",
+						"isCurrent"
+					],
+					[
+						"diff",
+						"diffbotUri"
+					],
+					[
+						"re",
+						"revenueCurrencySymbol"
+					],
+					[
+						"pl",
+						"plain_text"
+					],
+					[
+						"diffbo",
+						"diffbotUri"
+					],
+					[
+						"lan",
+						"languages"
+					],
+					[
+						"fou",
+						"foundingDateString"
+					],
+					[
+						"nb",
+						"nbEmployeesString"
+					],
+					[
+						"revenu",
+						"revenueString"
+					],
+					[
+						"un",
+						"unfurls"
+					],
+					[
+						"thre",
+						"threadBeganString"
+					],
+					[
+						"nat",
+						"naturalHeight"
+					],
+					[
+						"title",
+						"titleize"
+					],
+					[
+						"nbE",
+						"nbEmployeesMax"
+					],
+					[
+						"he",
+						"header"
+					],
+					[
+						"to",
+						"to_json"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/scripts/!oneoff/dev-docs-migrate/3.rb",
+					"settings":
+					{
+						"buffer_size": 6737,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/scripts/sales-overage-calculator/sales-overage-calculator",
+					"settings":
+					{
+						"buffer_size": 17562,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/rick/docs/docs/api-article.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-article.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-analyze.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-article-html.md",
+				"/scripts/!oneoff/dev-docs-migrate/docs/api-image.md",
+				"/root/dashboard/diffbot_dashboard/views/custom_api.py",
+				"/root/dashboard/diffbot_dashboard/forms/custom_api.py.bak",
+				"/scripts/sales-overage-calculator/sales-overage-calculator",
+				"/scripts/sales-renewal-alerts/sales-renewal-alerts",
+				"/scripts/sales-overage-calculator/sales-overage-calculator.production",
+				"/home/rick/docs/docs/api-analyze.md",
+				"/scripts/!oneoff/dev-docs-migrate/check_links_images.rb",
+				"/scripts/slack-diffbot/slack-message-receiver",
+				"/scripts/dev-docs-migrate/3.rb",
+				"/scripts/dev-docs-migrate/oneoff_to_get_suffixes.rb",
+				"/scripts/dev-docs-migrate/check_links_images.rb",
+				"/scripts/dev-docs-migrate/temp/images.txt",
+				"/scripts/dev-docs-migrate/temp/links.txt",
+				"/scripts/dev-docs-migrate/extract_support_page_data_DONE.rb",
+				"/scripts/dev-docs-migrate/temp/urls_with_titles.txt",
+				"/scripts/support-docs-migrate/extract_support_page_data_DONE.rb",
+				"/scripts/support-docs-migrate/temp/individual_articles.txt",
+				"/scripts/support-docs-migrate/3.rb",
+				"/scripts/support-docs-migrate/temp/support_urls_consolidated.txt",
+				"/scripts/support-docs-migrate/temp/support_docs.csv",
+				"/scripts/support-docs-migrate/oneoff_to_get_suffixes.rb",
+				"/scripts/support-docs-migrate/temp/suffixes.txt",
+				"/scripts/sales-overage-calculator/REFACTOR_sales-overage-calculator.rb",
+				"/scripts/slack-diffbot/slack-message-handler",
+				"/scripts/sales-overage-calculator/sales2.rb",
+				"/scripts/sales-overage-calculator/quickstart.rb",
+				"/usr/lib/cgi-bin/slack-message-handler",
+				"/usr/lib/cgi-bin/slack-message-receiver",
+				"/usr/lib/cgi-bin/slack-message-handler.rb",
+				"/temp/blocks2",
+				"/temp/request",
+				"/temp/blocks",
+				"/scripts/slack-diffbot-integration/slack-message-receiver",
+				"/scripts/slack-diffbot-revert/slack-diffbot-integration/slack-message-receiver"
+			],
+			"find":
+			{
+				"height": 27.0
+			},
+			"find_in_files":
+			{
+				"height": 101.0,
+				"where_history":
+				[
+					""
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"api_types",
+					"image",
+					"scriptd",
+					"puts",
+					"end",
+					", ",
+					"type_to",
+					"pagety",
+					"http",
+					"json",
+					"[i",
+					"support_section_urls",
+					"\\/$",
+					"strf",
+					"r[",
+					"wsOveragesOutputMasterRows",
+					"reloa",
+					"wsoveragesoutputro",
+					"tokenb",
+					"yes",
+					"wsbil",
+					"[wsOveragesOutputRows, wsOveragesOutput]",
+					"\"r.frozen?\"",
+					"contracten",
+					"contractEndDate",
+					"counts[0]",
+					"counts[i]",
+					"\\t",
+					"overagesm",
+					"token-",
+					"rows",
+					"color",
+					"this_scr",
+					"chat_un",
+					"data, blocks, position = 0",
+					"this_",
+					"color",
+					"block = ",
+					"entityid =",
+					"data, blocks",
+					"generation_options",
+					"generate_layout",
+					"respon",
+					"entityid",
+					"data, entityId,",
+					"generate_blocks",
+					"entityid",
+					"tags",
+					"/time",
+					"conn",
+					"params_h",
+					"kg.di",
+					"class",
+					"employedTo",
+					"oautht",
+					"diffbotto",
+					"((data, entityId, blocks))",
+					"((data",
+					"((data, entityId, blocks))",
+					"(data, blocks)",
+					"entityid",
+					"diffbottok",
+					"parse",
+					"^\\s+when.+$",
+					"newur",
+					"diffbottoke",
+					"/temp",
+					"blocks2",
+					"categ",
+					"crunchb",
+					"wiki",
+					"/",
+					"/temp",
+					"snake",
+					"filet",
+					"u[",
+					"block3",
+					"block2",
+					"block1",
+					"hash",
+					"\n                hash1 = {}\n                hash1[\"type\"] = \"context\"\n                hash1[\"elements\"] = []\n                hash1[\"elements\"][0] = {}\n                hash1[\"elements\"][0][\"type\"] = \"image\"\n                hash1[\"elements\"][0][\"image_url\"] = \"https://cdn1.iconfinder.com/data/icons/building-and-tower/512/4-512.png\"\n                hash1[\"elements\"][0][\"alt_text\"] = \"Article\"\n                hash1[\"elements\"][1] = {}\n                hash1[\"elements\"][1][\"type\"] = \"mrkdwn\"\n                hash1[\"elements\"][1][\"text\"] = \"*Gates Corporation* :snake:  (<http://www.gates.com|gates.com>)\\nDenver, Colorado\"\n                hash2 = {\"type\" => \"divider\"}\n                hash3 = { \"type\": \"section\"}\n                hash3[\"text\"] = {}\n                hash3[\"text\"][\"type\"] = \"mrkdwn\"\n                hash3[\"text\"][\"text\"] = \"<http://somesite.com|JSON>\"\n                blocks.push hash1\n                blocks.push hash2\n                blocks.push hash3\n",
+					"file.wri",
+					"unfurlJson",
+					"revenueString",
+					"address",
+					"1000",
+					"  = ",
+					"  (given in km2)",
+					" (links side-by-side)",
+					"  (usually gives city/state)",
+					"[0]\"]",
+					" (links side by side)",
+					"yearlyRevenues[0][\"revenue\"][\"value\"] = data[\"yearlyRevenues[0][\"revenue\"][\"value\"]\"]",
+					"yearlyRevenues[0][\"revenue\"][\"currency\"] = data[\"yearlyRevenues[0][\"revenue\"][\"currency\"]\"]",
+					"categories[n][\"name\"] = data[\"categories[n]\"][\"name\"]",
+					"images[0][\"url\"] = data[\"images[0][\"url\"]]",
+					"images[0][\"naturalHeight\"] = data[\"images[0][\"naturalHeight\"]\"]",
+					"images[0][\"naturalWidth\"] = data[\"images[0][\"naturalWidth\"]\"]",
+					"images[0][\"url\"] = data[\"images[0][\"url\"]\"]",
+					"date[\"timestamp\"] = data[\"date[\"timestamp\"]\"]",
+					"] (with links)",
+					" (must be converted)",
+					" (format)",
+					" (use to derive a range)",
+					" (gives city/state)",
+					"Uri \"]",
+					" (grab first 5; make it expandable)",
+					" (grab first 5; make it expandable)\"",
+					"”",
+					"“",
+					"tokenfil",
+					"id"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": true,
+				"replace_history":
+				[
+					"\\n",
+					"support_urls_consolidated",
+					"",
+					"a[",
+					"r.frozen?.to_s",
+					"counts[i]",
+					"counts[0]",
+					"    ",
+					"dataArray, blocks, position = 0",
+					"generate_options",
+					"generation_options",
+					"data,",
+					"generate_layout",
+					"(data, entityId, blocks)",
+					"(data",
+					"(data, entityId, blocks)",
+					"blocks[3]",
+					"blocks[2]",
+					"blocks[1]",
+					"block",
+					"hash1 = {}\n                hash1[\"type\"] = \"context\"\n                hash1[\"elements\"] = []\n                hash1[\"elements\"][0] = {}\n                hash1[\"elements\"][0][\"type\"] = \"image\"\n                hash1[\"elements\"][0][\"image_url\"] = \"https://cdn1.iconfinder.com/data/icons/building-and-tower/512/4-512.png\"\n                hash1[\"elements\"][0][\"alt_text\"] = \"Article\"\n                hash1[\"elements\"][1] = {}\n                hash1[\"elements\"][1][\"type\"] = \"mrkdwn\"\n                hash1[\"elements\"][1][\"text\"] = \"*Gates Corporation* :snake:  (<http://www.gates.com|gates.com>)\\nDenver, Colorado\"\n                hash2 = {\"type\" => \"divider\"}\n                hash3 = { \"type\": \"section\"}\n                hash3[\"text\"] = {}\n                hash3[\"text\"][\"type\"] = \"mrkdwn\"\n                hash3[\"text\"][\"text\"] = \"<http://somesite.com|JSON>\"\n                blocks.push hash1\n                blocks.push hash2\n                blocks.push hash3",
+					" = ",
+					"",
+					"\"][0]",
+					"",
+					"revenue = data[\"yearlyRevenues[0]\"][\"revenue\"][\"value\"]",
+					"revenueCurrency = data[\"yearlyRevenues[0]\"][\"revenue\"][\"currency\"]",
+					"categories = data[\"categories\"]",
+					"img = images[0]",
+					"",
+					"img = images[0]",
+					"timestamp = data[\"date\"][\"timestamp\"]",
+					"]",
+					"",
+					"Uri\"]",
+					"",
+					"\""
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/scripts/!oneoff/dev-docs-migrate/3.rb",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 6737,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										5558,
+										5558
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 51.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/scripts/sales-overage-calculator/sales-overage-calculator",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 17562,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,1,0,0,0,0,0,0,0,1680,862",
+			"project": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 392.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"",
+						"authorize"
+					]
+				],
+				"width": 592.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

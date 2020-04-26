@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/rick/Downloads/ngrok-stable-linux-amd64.zip" added="2019-06-15T22:41:19Z" modified="2019-06-15T22:41:19Z" visited="2019-06-15T22:41:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-06-15T22:41:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/lib/cgi-bin/slack-message-receiver" added="2019-06-24T22:19:22Z" modified="2019-07-16T19:51:13Z" visited="2019-06-24T22:19:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-07-16T19:51:13Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot-revert/slack-diffbot-integration/slack-message-receiver" added="2019-06-25T14:15:40Z" modified="2019-06-25T14:15:40Z" visited="2019-06-25T14:15:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-06-25T14:15:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot-integration/slack-message-receiver" added="2019-06-25T16:10:10Z" modified="2019-06-25T16:50:19Z" visited="2019-06-25T16:10:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-06-25T16:50:19Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot/slack-message-receiver" added="2019-06-25T16:28:08Z" modified="2019-12-26T21:14:04Z" visited="2019-06-25T16:28:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-26T21:14:04Z" count="12"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-07-25T23:57:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-message-receiver" added="2019-07-08T20:33:40Z" modified="2019-07-08T20:33:40Z" visited="2019-07-08T20:33:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-07-08T20:33:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///temp/blocks" added="2019-07-18T21:58:49Z" modified="2019-07-22T20:53:31Z" visited="2019-07-18T21:58:49Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-07-22T20:53:31Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///temp/request" added="2019-07-22T20:47:27Z" modified="2019-07-22T20:47:27Z" visited="2019-07-22T20:47:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-07-22T20:47:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot/.dbtoken" added="2019-07-25T05:05:17Z" modified="2019-07-25T05:14:14Z" visited="2019-07-25T05:05:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-07-25T05:14:14Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot/.oauth" added="2019-07-25T05:05:17Z" modified="2019-07-25T05:14:14Z" visited="2019-07-25T05:05:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-07-25T05:14:14Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///temp/blocks2" added="2019-07-29T19:08:55Z" modified="2019-07-29T19:08:55Z" visited="2019-07-29T19:08:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-07-29T19:08:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot-internal/slack/roles/slack-kg-integration/files/var/www/cgi-bin/slack-message-receiver" added="2019-07-29T22:01:25Z" modified="2019-07-29T22:09:26Z" visited="2019-07-29T22:01:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-07-29T22:09:26Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/lib/cgi-bin/slack-message-handler.rb" added="2019-08-09T01:29:04Z" modified="2019-08-09T01:29:20Z" visited="2019-08-09T01:29:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-08-09T01:29:20Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/lib/cgi-bin/slack-message-handler" added="2019-08-09T01:40:15Z" modified="2019-08-09T01:40:15Z" visited="2019-08-09T01:40:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-08-09T01:40:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/slack-diffbot/slack-message-handler" added="2019-08-09T20:10:34Z" modified="2019-08-09T21:01:27Z" visited="2019-08-09T20:10:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-08-09T21:01:27Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/sales-overage-calculator" added="2019-09-14T12:10:04Z" modified="2020-04-02T18:54:46Z" visited="2019-09-14T12:10:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-03T01:11:16Z" count="8"/>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-02T18:54:46Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/Sales-Overages" added="2019-09-14T13:21:27Z" modified="2019-09-14T13:21:27Z" visited="2019-09-14T13:21:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-09-14T13:21:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/Sales-Overages.csv" added="2019-09-14T13:21:41Z" modified="2019-09-14T13:36:11Z" visited="2019-09-14T13:21:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/csv"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-09-14T13:36:11Z" count="13"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-09-14T13:35:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/Sales-CustomBilling" added="2019-09-14T13:36:11Z" modified="2019-09-14T13:36:11Z" visited="2019-09-14T13:36:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-09-14T13:36:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/Sales-CustomBilling.csv" added="2019-09-14T13:36:11Z" modified="2019-09-14T14:47:30Z" visited="2019-09-14T13:36:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/csv"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-09-14T14:47:30Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/Downloads/credentials.json" added="2019-09-14T13:40:28Z" modified="2019-09-14T15:34:28Z" visited="2019-09-14T13:40:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-09-14T15:34:28Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///var/log/apache2/test.csv" added="2019-09-14T14:07:49Z" modified="2019-09-14T14:47:29Z" visited="2019-09-14T14:07:49Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/csv"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 6.0" exec="&apos;soffice %u&apos;" modified="2019-09-14T14:47:29Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/quickstart.rb" added="2019-09-14T15:12:19Z" modified="2019-09-14T15:12:19Z" visited="2019-09-14T15:12:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-09-14T15:12:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/Downloads/credentials(1).json" added="2019-09-14T16:05:02Z" modified="2019-09-14T16:05:02Z" visited="2019-09-14T16:05:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-09-14T16:05:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/sales2.rb" added="2019-09-14T16:31:41Z" modified="2019-09-14T16:31:41Z" visited="2019-09-14T16:31:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-09-14T16:31:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-renewal-alerts/sales-renewal-alerts" added="2019-10-30T22:35:14Z" modified="2020-03-13T20:59:37Z" visited="2019-10-30T22:35:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-03T01:20:49Z" count="2"/>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-13T20:59:37Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/Pictures/Screenshot%20from%202019-11-15%2015-35-10.png" added="2019-11-15T23:35:11Z" modified="2019-11-15T23:35:11Z" visited="2019-11-15T23:35:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gsd-media-keys" exec="&apos;gsd-media-keys %u&apos;" modified="2019-11-15T23:35:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/REFACTOR_sales-overage-calculator.rb" added="2019-11-26T22:57:06Z" modified="2019-11-26T22:57:06Z" visited="2019-11-26T22:57:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-11-26T22:57:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/extract_support_page_data_DONE.rb" added="2019-12-13T18:48:40Z" modified="2019-12-13T18:48:40Z" visited="2019-12-13T18:48:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T18:48:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/oneoff_to_get_suffixes.rb" added="2019-12-13T19:19:50Z" modified="2019-12-13T19:19:50Z" visited="2019-12-13T19:19:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T19:19:50Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/temp/suffixes.txt" added="2019-12-13T19:27:56Z" modified="2019-12-13T19:27:56Z" visited="2019-12-13T19:27:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T19:27:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/3.rb" added="2019-12-13T19:52:24Z" modified="2019-12-13T19:52:24Z" visited="2019-12-13T19:52:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T19:52:24Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/temp/support_urls_consolidated.txt" added="2019-12-13T20:15:38Z" modified="2019-12-13T20:15:38Z" visited="2019-12-13T20:15:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T20:15:38Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/temp/individual_articles.txt" added="2019-12-13T20:31:15Z" modified="2019-12-13T20:31:15Z" visited="2019-12-13T20:31:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T20:31:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/temp/support_docs.csv" added="2019-12-13T21:04:01Z" modified="2019-12-13T21:07:13Z" visited="2019-12-13T21:04:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/csv"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-13T21:07:13Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/support-docs-migrate/docs/tutorials-custom-collections.html" added="2019-12-14T01:07:08Z" modified="2019-12-14T01:07:08Z" visited="2019-12-14T01:07:09Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-12-14T01:07:08Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/oneoff_to_get_suffixes.rb" added="2019-12-16T20:37:01Z" modified="2019-12-16T20:37:01Z" visited="2019-12-16T20:37:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T20:37:01Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/extract_support_page_data_DONE.rb" added="2019-12-16T20:37:06Z" modified="2019-12-16T20:37:06Z" visited="2019-12-16T20:37:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T20:37:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/3.rb" added="2019-12-16T20:39:30Z" modified="2019-12-16T20:39:30Z" visited="2019-12-16T20:39:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T20:39:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/temp/urls_with_titles.txt" added="2019-12-16T20:42:06Z" modified="2019-12-16T20:44:24Z" visited="2019-12-16T20:42:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T20:44:24Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/check_links_images.rb" added="2019-12-16T22:31:45Z" modified="2019-12-16T22:31:45Z" visited="2019-12-16T22:31:45Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T22:31:45Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/temp/links.txt" added="2019-12-16T22:33:37Z" modified="2019-12-16T22:44:57Z" visited="2019-12-16T22:33:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T22:44:57Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/dev-docs-migrate/temp/images.txt" added="2019-12-16T23:14:09Z" modified="2019-12-16T23:14:09Z" visited="2019-12-16T23:14:09Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-16T23:14:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///etc/cron.daily/logrotate" added="2019-12-26T21:49:59Z" modified="2019-12-26T21:49:59Z" visited="2019-12-26T21:49:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-12-26T21:49:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///etc/cron.daily/ntp" added="2019-12-26T21:54:05Z" modified="2019-12-26T21:54:05Z" visited="2019-12-26T21:54:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2019-12-26T21:54:05Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/api-analyze.html" added="2019-12-28T03:07:53Z" modified="2019-12-28T03:07:53Z" visited="2019-12-28T03:07:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-12-28T03:07:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/docs/api-analyze.md" added="2019-12-30T19:10:31Z" modified="2019-12-30T20:52:01Z" visited="2019-12-30T19:10:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-30T20:52:01Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/3.rb" added="2019-12-30T19:39:40Z" modified="2020-01-09T22:14:39Z" visited="2019-12-30T19:39:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-30T19:39:40Z" count="1"/>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-09T22:14:39Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/check_links_images.rb" added="2019-12-30T19:39:45Z" modified="2019-12-30T19:39:45Z" visited="2019-12-30T19:39:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-30T19:39:45Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/test.html" added="2019-12-30T20:01:00Z" modified="2019-12-30T20:01:00Z" visited="2019-12-30T20:01:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2019-12-30T20:01:00Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs/api-analyze.md" added="2019-12-30T20:59:04Z" modified="2020-01-07T02:52:39Z" visited="2019-12-30T20:59:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-07T02:52:39Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs/api-article.md" added="2019-12-30T21:15:18Z" modified="2020-01-07T06:39:36Z" visited="2019-12-30T21:15:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-07T06:39:36Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs/api-article-html.md" added="2019-12-30T21:16:12Z" modified="2019-12-30T21:16:12Z" visited="2019-12-30T21:16:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-30T21:16:12Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs/api-image.md" added="2019-12-30T21:22:16Z" modified="2019-12-30T21:22:16Z" visited="2019-12-30T21:22:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2019-12-30T21:22:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/sales-overage-calculator/sales-overage-calculator.production" added="2020-01-03T01:11:48Z" modified="2020-01-03T01:11:48Z" visited="2020-01-03T01:11:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-03T01:11:48Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/forms/custom_api.py" added="2020-01-03T08:32:56Z" modified="2020-01-03T08:32:56Z" visited="2020-01-03T08:32:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-03T08:32:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/forms/custom_api.py.bak" added="2020-01-04T00:08:28Z" modified="2020-01-04T00:08:28Z" visited="2020-01-04T00:08:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-trash"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-04T00:08:28Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/views/custom_api.py" added="2020-01-04T00:38:22Z" modified="2020-03-04T21:00:46Z" visited="2020-01-04T00:38:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-04T00:38:22Z" count="1"/>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-04T21:00:46Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/docs/api-article.md" added="2020-01-07T03:08:38Z" modified="2020-01-07T06:59:55Z" visited="2020-01-07T03:08:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-07T06:59:55Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs" added="2020-01-07T20:00:03Z" modified="2020-01-07T22:43:10Z" visited="2020-01-07T20:00:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-07T20:00:03Z" count="1"/>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-07T22:43:10Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs/api-account.md" added="2020-01-07T20:06:06Z" modified="2020-01-07T20:06:06Z" visited="2020-01-07T20:06:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2020-01-07T20:06:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/docs" added="2020-01-07T20:16:48Z" modified="2020-01-07T20:20:46Z" visited="2020-01-07T20:16:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-07T20:20:46Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/temp.txt" added="2020-01-07T23:14:30Z" modified="2020-01-07T23:14:30Z" visited="2020-01-07T23:14:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-07T23:14:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs.text/docs" added="2020-01-09T22:29:28Z" modified="2020-01-09T22:29:28Z" visited="2020-01-09T22:29:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-09T22:29:28Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/dev-docs-migrate/docs.text" added="2020-01-09T22:33:47Z" modified="2020-01-09T22:33:47Z" visited="2020-01-09T22:33:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-09T22:33:47Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/!oneoff/support-docs-migrate/3.rb" added="2020-01-09T23:24:55Z" modified="2020-04-08T18:04:43Z" visited="2020-01-09T23:24:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-09T23:24:55Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2020-04-08T18:04:43Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/out.txt" added="2020-01-14T19:12:53Z" modified="2020-02-12T05:13:40Z" visited="2020-01-14T19:12:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-12T05:13:40Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/static/webpack/base.4afc8dda57afab18082b.bundle.js.map" added="2020-01-17T01:14:57Z" modified="2020-01-17T01:14:57Z" visited="2020-01-17T01:14:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-01-17T01:14:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/helpers/__init__.py" added="2020-01-21T19:37:29Z" modified="2020-01-21T19:37:29Z" visited="2020-01-21T19:37:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-21T19:37:29Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/webpack/js/custom_api.js" added="2020-01-22T00:44:14Z" modified="2020-03-12T21:59:38Z" visited="2020-01-22T00:44:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-12T21:59:38Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_create.html" added="2020-01-22T21:21:14Z" modified="2020-01-22T21:21:52Z" visited="2020-01-22T21:21:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-22T21:21:52Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html" added="2020-01-22T21:21:46Z" modified="2020-03-04T19:52:22Z" visited="2020-01-22T21:21:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-04T19:52:22Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_iframe.html" added="2020-01-22T21:21:57Z" modified="2020-01-22T21:21:57Z" visited="2020-01-22T21:21:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-22T21:21:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html" added="2020-01-22T21:22:02Z" modified="2020-03-04T20:00:35Z" visited="2020-01-22T21:22:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-04T20:00:35Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_list.html" added="2020-01-22T21:22:05Z" modified="2020-01-22T21:22:05Z" visited="2020-01-22T21:22:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-22T21:22:05Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html" added="2020-01-22T21:22:11Z" modified="2020-03-04T19:57:53Z" visited="2020-01-22T21:22:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-04T19:57:53Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dashboard/diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html" added="2020-01-22T21:22:17Z" modified="2020-03-04T20:02:02Z" visited="2020-01-22T21:22:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-04T20:02:02Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/slack/roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator" added="2020-01-22T22:47:36Z" modified="2020-01-22T22:47:36Z" visited="2020-01-22T22:47:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-22T22:47:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/out.html" added="2020-01-28T20:15:15Z" modified="2020-01-28T20:15:15Z" visited="2020-01-28T20:15:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-01-28T20:15:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/out.json" added="2020-01-28T20:20:20Z" modified="2020-01-28T20:20:20Z" visited="2020-01-28T20:20:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-01-28T20:20:20Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/out_GET" added="2020-01-28T20:33:33Z" modified="2020-01-28T20:33:33Z" visited="2020-01-28T20:33:34Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-28T20:33:33Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/out" added="2020-01-28T20:34:23Z" modified="2020-01-28T20:34:23Z" visited="2020-01-28T20:34:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-01-28T20:34:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/out_GET.json" added="2020-01-28T20:36:49Z" modified="2020-01-28T20:36:49Z" visited="2020-01-28T20:36:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-01-28T20:36:49Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/application/tools/views.py" added="2020-02-12T20:40:13Z" modified="2020-04-02T20:57:46Z" visited="2020-02-12T20:40:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-02T20:57:46Z" count="9"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools_working/application/tools/views.py" added="2020-02-13T18:32:06Z" modified="2020-02-13T18:32:06Z" visited="2020-02-13T18:32:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-13T18:32:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/modifyplan.html" added="2020-02-13T18:47:37Z" modified="2020-03-31T01:21:18Z" visited="2020-02-13T18:47:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T01:21:18Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools" added="2020-02-13T18:48:59Z" modified="2020-02-13T18:48:59Z" visited="2020-02-13T18:49:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-13T18:48:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/application/tools/views.pyc" added="2020-02-13T19:07:37Z" modified="2020-02-13T19:07:37Z" visited="2020-02-13T19:07:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-python-bytecode"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-13T19:07:37Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/application/tools/forms.py" added="2020-02-13T19:23:12Z" modified="2020-03-31T01:38:08Z" visited="2020-02-13T19:23:12Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T01:38:08Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/customplans.html" added="2020-02-13T20:34:57Z" modified="2020-02-24T19:38:44Z" visited="2020-02-13T20:34:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-24T19:38:44Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/SLACK_ROLES/roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts" added="2020-02-18T19:32:13Z" modified="2020-03-13T23:52:53Z" visited="2020-02-18T19:32:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-13T23:52:53Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/SLACK_ROLES/roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator" added="2020-02-18T19:44:07Z" modified="2020-04-15T23:31:29Z" visited="2020-02-18T19:44:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-15T23:31:29Z" count="6"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dropdownfix/support_tools/templates/tools/newtoken.html" added="2020-02-18T21:02:03Z" modified="2020-02-18T21:02:03Z" visited="2020-02-18T21:02:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-18T21:02:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dropdownfix/support_tools/application/tools/views.py" added="2020-02-18T21:06:46Z" modified="2020-02-19T21:20:44Z" visited="2020-02-18T21:06:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-19T21:20:44Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dropdownfix/support_tools/application/tools/forms.py" added="2020-02-18T21:07:10Z" modified="2020-02-18T21:07:10Z" visited="2020-02-18T21:07:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-18T21:07:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/dropdownfix/support_tools/application/tools/models.py" added="2020-02-19T00:02:57Z" modified="2020-02-19T00:02:57Z" visited="2020-02-19T00:02:57Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-19T00:02:57Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/testdrive.html" added="2020-02-20T23:33:38Z" modified="2020-02-28T07:04:10Z" visited="2020-02-20T23:33:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-28T07:04:10Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/saved.html" added="2020-02-24T19:14:55Z" modified="2020-02-24T19:14:55Z" visited="2020-02-24T19:14:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-24T19:14:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/proxies.html" added="2020-02-24T19:15:11Z" modified="2020-02-24T19:15:11Z" visited="2020-02-24T19:15:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-24T19:15:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/archiver.html" added="2020-02-25T00:22:43Z" modified="2020-02-25T00:22:43Z" visited="2020-02-25T00:22:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-25T00:22:43Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/application/tools/models.pyc" added="2020-02-25T19:40:04Z" modified="2020-02-25T19:40:04Z" visited="2020-02-25T19:40:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-python-bytecode"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-25T19:40:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/application/tools/models.py" added="2020-02-25T19:40:18Z" modified="2020-03-31T01:38:13Z" visited="2020-02-25T19:40:18Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T01:38:13Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/index.html" added="2020-02-25T22:37:44Z" modified="2020-02-25T22:37:44Z" visited="2020-02-25T22:37:45Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-25T22:37:44Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/base.html" added="2020-02-25T22:38:47Z" modified="2020-02-25T22:38:47Z" visited="2020-02-25T22:38:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-02-25T22:38:47Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/custombilling.html" added="2020-02-28T06:37:51Z" modified="2020-03-31T01:20:59Z" visited="2020-02-28T06:37:52Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T01:20:59Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/Downloads/FireShot%20Capture%20001%20-%20Manage%20Plans%20Diffbot%20Support%20-%20labs.diffbot.com.png" added="2020-02-28T21:27:29Z" modified="2020-02-28T21:27:29Z" visited="2020-02-28T21:27:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-02-28T21:27:29Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/Downloads/FireShot%20Capture%20002%20-%20Manage%20Plans%20Diffbot%20Support%20-%20labs.diffbot.com.png" added="2020-02-28T22:55:22Z" modified="2020-02-28T22:55:23Z" visited="2020-02-28T22:55:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-02-28T22:55:23Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/Downloads/FireShot%20Capture%20003%20-%20Manage%20Plans%20Diffbot%20Support%20-%20labs.diffbot.com.png" added="2020-02-28T23:11:36Z" modified="2020-02-28T23:11:37Z" visited="2020-02-28T23:11:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2020-02-28T23:11:37Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/sales-overage-calculator" added="2020-03-13T01:15:51Z" modified="2020-03-13T01:15:51Z" visited="2020-03-13T01:15:51Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-13T01:15:51Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root" added="2020-03-13T23:12:54Z" modified="2020-03-13T23:12:54Z" visited="2020-03-13T23:12:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-13T23:12:54Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/custombilling_add.html" added="2020-03-31T01:20:59Z" modified="2020-03-31T01:20:59Z" visited="2020-03-31T01:20:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T01:20:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/jobs.html" added="2020-03-31T19:02:16Z" modified="2020-03-31T19:02:16Z" visited="2020-03-31T19:02:16Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T19:02:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/jobdetail.html" added="2020-03-31T19:05:59Z" modified="2020-03-31T19:05:59Z" visited="2020-03-31T19:06:00Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T19:05:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/job_detail_section" added="2020-03-31T22:24:10Z" modified="2020-03-31T22:24:10Z" visited="2020-03-31T22:24:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T22:24:10Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/jobdetailsection" added="2020-03-31T22:24:30Z" modified="2020-03-31T22:24:30Z" visited="2020-03-31T22:24:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T22:24:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/jobdetailssection.html" added="2020-03-31T22:25:54Z" modified="2020-03-31T22:25:54Z" visited="2020-03-31T22:25:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-03-31T22:25:54Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/support_tools/templates/tools/account.html" added="2020-04-02T20:54:52Z" modified="2020-04-02T20:54:52Z" visited="2020-04-02T20:54:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-02T20:54:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/overage_temp" added="2020-04-06T20:25:07Z" modified="2020-04-06T20:25:07Z" visited="2020-04-06T20:25:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-06T20:25:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///scripts/overage_temp.rb" added="2020-04-06T20:29:22Z" modified="2020-04-06T20:29:22Z" visited="2020-04-06T20:29:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ruby"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-06T20:29:22Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/website/sidebars.json" added="2020-04-08T18:08:06Z" modified="2020-04-08T18:10:52Z" visited="2020-04-08T18:08:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-08T18:10:52Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/website/i18n/en.json" added="2020-04-08T18:13:32Z" modified="2020-04-08T18:13:32Z" visited="2020-04-08T18:13:32Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-08T18:13:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/website/siteConfig.js" added="2020-04-08T18:23:19Z" modified="2020-04-08T18:23:19Z" visited="2020-04-08T18:23:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-08T18:23:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/rick/docs/website/static/js/app.js" added="2020-04-08T18:45:44Z" modified="2020-04-08T18:46:20Z" visited="2020-04-08T18:45:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-08T18:46:20Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/docs/docs/api-account.md" added="2020-04-16T18:26:09Z" modified="2020-04-16T18:26:09Z" visited="2020-04-16T18:26:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-16T18:26:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/docs/docs/kg-enhance.md" added="2020-04-16T18:26:09Z" modified="2020-04-16T18:26:09Z" visited="2020-04-16T18:26:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-16T18:26:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/docs/docs/kg-excel-plugin.md" added="2020-04-16T18:26:09Z" modified="2020-04-16T18:26:09Z" visited="2020-04-16T18:26:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-16T18:26:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/docs/docs/kg-key-concepts.md" added="2020-04-16T18:26:09Z" modified="2020-04-16T18:26:09Z" visited="2020-04-16T18:26:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-16T18:26:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/docs/docs/kg-quickstart.md" added="2020-04-16T18:26:09Z" modified="2020-04-16T18:26:09Z" visited="2020-04-16T18:26:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-16T18:26:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/docs/docs/kg-search.md" added="2020-04-16T18:26:09Z" modified="2020-04-16T18:26:09Z" visited="2020-04-16T18:26:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="code" exec="&apos;code %u&apos;" modified="2020-04-16T18:26:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///" added="2020-04-18T16:50:56Z" modified="2020-04-18T16:50:56Z" visited="2020-04-18T16:50:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:groups>
+          <bookmark:group>baobab</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="baobab" exec="&apos;baobab %u&apos;" modified="2020-04-18T16:50:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

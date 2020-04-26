@@ -1,0 +1,18 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'webpack-dev.watch' ]
+2 info using npm@6.13.4
+3 info using node@v10.18.1
+4 verbose run-script [ 'prewebpack-dev.watch',
+4 verbose run-script   'webpack-dev.watch',
+4 verbose run-script   'postwebpack-dev.watch' ]
+5 info lifecycle difbot-dashboard@0.0.1~prewebpack-dev.watch: difbot-dashboard@0.0.1
+6 info lifecycle difbot-dashboard@0.0.1~webpack-dev.watch: difbot-dashboard@0.0.1
+7 verbose lifecycle difbot-dashboard@0.0.1~webpack-dev.watch: unsafe-perm in lifecycle true
+8 verbose lifecycle difbot-dashboard@0.0.1~webpack-dev.watch: PATH: /usr/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/root/dashboard/node_modules/.bin:/root/dashboard/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+9 verbose lifecycle difbot-dashboard@0.0.1~webpack-dev.watch: CWD: /root/dashboard
+10 silly lifecycle difbot-dashboard@0.0.1~webpack-dev.watch: Args: [ '-c',
+10 silly lifecycle   'webpack --watch --mode=development --devtool=source-map' ]
+11 timing npm Completed in 15863ms
+12 error cb() never called!
+13 error This is an error with npm itself. Please report this error at:
+14 error <https://npm.community>

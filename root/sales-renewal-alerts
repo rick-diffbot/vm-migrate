@@ -1,0 +1,139 @@
+#!/usr/bin/ruby
+
+require "google_drive"
+#require "faraday"
+#require "json"
+require "date"
+require "mail"
+
+## FUNCTION DEFINITIONS
+
+def dump_to_sheet(rowArray, sheetVar, startRow)
+    rowNum = startRow
+    for row in rowArray
+        colNum = 1
+        for cell in row
+            sheetVar[rowNum, colNum] = cell
+            colNum += 1
+        end
+        rowNum += 1
+    end
+    return sheetVar
+end
+
+## INITIAL VARIABLES
+
+scriptDir = "/var/www/sales-renewal-alerts/"
+
+
+# Create a Google Drive Session
+session = GoogleDrive::Session.from_config(scriptDir + "config.json")
+
+# load worksheet objects
+wsBillingData = session.spreadsheet_by_key("1gGSCURCWTbMrI9_KxhAhxJcIqxdvtSurYK9CRFo3EBY").worksheets[0]
+#wsBillingData = session.spreadsheet_by_key("1iDMtFdJwUtvftNmiqoaRV6jXoUcmEJbZm5JNhnjMNqU").worksheets[0]
+billingRenewalsData = session.spreadsheet_by_key("1h6QPNTY3ZGtV4Vl-oj6SKnVmvkVVF6KRdwKx1IUOJoQ").worksheets[0]  # Detailed output
+
+billingRenewalsDataRows = billingRenewalsData.rows
+wsBillingDataRows = wsBillingData.rows
+
+# Generate token-billingDate combinations.  These are used to make sure we don't generate output for a renewal that was already logged.
+tokenBillingEndDateCombinations = []
+billingRenewalsDataRows[1..billingRenewalsDataRows.length-1].each do |row|
+    company = row[0]
+    name = row[1]
+    email = row[2]
+    token = row[3]
+    contractEndDate = row[4]
+    tokenBillingEndDateCombinations.push [token,contractEndDate] 
+end
+
+newRenewals = []
+emailsToSend = []
+#renewalAlerts = []  
+wsBillingDataRows[1..wsBillingData.rows.length-1].each do |r|
+    # Extract variables from Custom Billing Worksheet row
+    company = r[0]
+    name = r[1]
+    email = r[2]
+    token = r[3]
+    contractEndDate = r[5].length > 5 ? r[5] : nil
+    errorInLine = r[13].strip
+
+    if errorInLine == "1" || contractEndDate == nil
+        next
+    end
+
+    today = Date.today
+    daysUntilRenew = (Date.strptime(contractEndDate, '%m/%d/%Y') - today).to_i
+
+    if daysUntilRenew > 0 && daysUntilRenew <= 90 # do nothing if renewal date has passed
+        if ((tokenBillingEndDateCombinations.include? [token, contractEndDate]) == false)
+            newRenewals.push [company, name, email, token, contractEndDate, daysUntilRenew]
+            if ([5,10,30,60,90].include? daysUntilRenew)
+                emailsToSend.push [company, name, email, token, contractEndDate, daysUntilRenew]
+            end
+        end
+    end
+end
+
+# refresh wsBillingData and wsBillingDataRows with updated data.
+billingRenewalsData = dump_to_sheet(newRenewals.map { |arr| arr[0..-2]}, billingRenewalsData, billingRenewalsDataRows.length + 1)  # note here that we are not dumping the last member of each member of newRenewals, because "daysUntil" does not go on the sheet
+billingRenewalsData.save()
+
+# Fire off e-mails as needed
+
+emailsToSend.each do |a|
+    company = a[0].strip
+    name = a[1].strip
+    email = a[2].strip
+    token = a[3].strip
+    contractEndDate = a[4]
+    daysUntilRenew = a[5]
+    emailRecipients = ["rick@diffbot.com", "sales@diffbot.com"]
+    emailSubject = "UPCOMING RENEWAL ALERT -- #{company}/#{name} (token #{token}) is up for renewal in #{daysUntilRenew} days."
+    emailBody = "Dear Sales Team,\n\n#{a[0]}/#{a[1]} (token #{a[3]}) will be up for renewal in #{daysUntilRenew} days.\n\nMore details can be found at https://docs.google.com/spreadsheets/d/1h6QPNTY3ZGtV4Vl-oj6SKnVmvkVVF6KRdwKx1IUOJoQ/edit#gid=0\n\nYours Truly,\nDiffbot Renewal Notifier" 
+
+    ### NOTE THAT WE ARE STILL USING THE BILLING CALCULATOR EMAIL HERE
+    options = { :address              => "smtp.gmail.com",
+                :port                 => 587,
+                :domain               => 'nike.diffbot.com',
+                :user_name            => 'diffbotsalescalculator@gmail.com',
+                :password             => File.read(scriptDir + ".gmailpass").chomp,
+                :authentication       => 'plain',
+                :enable_starttls_auto => true  
+    }
+
+    Mail.defaults do
+        delivery_method :smtp, options
+    end
+
+    Mail.deliver do
+        from    'diffbotsalescalculator@gmail.com'
+        to      emailRecipients.join(", ")
+        subject emailSubject
+        body    emailBody
+    end
+end
+
+
+# Send e-mail to self confirming script completed successfully
+options = { :address              => "smtp.gmail.com",
+            :port                 => 587,
+            :domain               => 'nike.diffbot.com',
+            :user_name            => 'diffbotsalescalculator@gmail.com',
+            :password             => File.read(scriptDir + ".gmailpass").chomp,
+            :authentication       => 'plain',
+            :enable_starttls_auto => true
+}
+Mail.defaults do
+    delivery_method :smtp, options
+end
+Mail.deliver do
+    from    'diffbotsalescalculator@gmail.com'
+    to      "rick@diffbot.com"
+    subject "sales-renewal-alerts Finished Successfully"
+    body    "Hello Rick,\n\nThe sales-renewal-alerts script on nike.diffbot.com has completed successfully."
+end
+
+

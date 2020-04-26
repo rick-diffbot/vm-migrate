@@ -1,0 +1,82 @@
+[2020-01-28 12:33:18.296] [main] [info] update#setState idle
+[2020-01-28 12:33:48.300] [main] [info] update#setState checking for updates
+[2020-01-28 12:33:48.322] [main] [info] update#setState idle
+[2020-01-28 13:33:48.687] [main] [info] update#setState checking for updates
+[2020-01-28 13:33:48.823] [main] [info] update#setState idle
+[2020-01-29 12:26:50.717] [main] [info] update#setState checking for updates
+[2020-01-29 12:26:51.454] [main] [info] update#setState idle
+[2020-01-29 13:26:50.907] [main] [info] update#setState checking for updates
+[2020-01-29 13:26:51.951] [main] [info] update#setState idle
+[2020-01-29 14:26:51.870] [main] [info] update#setState checking for updates
+[2020-01-29 14:26:52.712] [main] [info] update#setState idle
+[2020-01-29 15:26:52.611] [main] [info] update#setState checking for updates
+[2020-01-29 15:26:54.440] [main] [info] update#setState idle
+[2020-01-29 16:26:54.682] [main] [info] update#setState checking for updates
+[2020-01-29 16:27:04.740] [main] [error] Error: net::ERR_NAME_NOT_RESOLVED
+[2020-01-29 16:27:04.741] [main] [info] update#setState idle
+[2020-01-29 17:26:54.916] [main] [info] update#setState checking for updates
+[2020-01-29 17:26:55.797] [main] [info] update#setState idle
+[2020-01-29 18:26:56.481] [main] [info] update#setState checking for updates
+[2020-01-29 18:26:58.040] [main] [info] update#setState idle
+[2020-01-29 19:26:58.109] [main] [info] update#setState checking for updates
+[2020-01-29 19:26:59.129] [main] [info] update#setState idle
+[2020-01-29 20:26:59.654] [main] [info] update#setState checking for updates
+[2020-01-29 20:27:01.037] [main] [info] update#setState idle
+[2020-01-29 21:27:01.114] [main] [info] update#setState checking for updates
+[2020-01-29 21:27:06.646] [main] [info] update#setState idle
+[2020-01-29 22:27:03.750] [main] [info] update#setState checking for updates
+[2020-01-29 22:27:04.308] [main] [info] update#setState idle
+[2020-01-29 23:27:07.173] [main] [info] update#setState checking for updates
+[2020-01-29 23:27:34.577] [main] [info] update#setState idle
+[2020-01-30 00:27:17.573] [main] [info] update#setState checking for updates
+[2020-01-30 00:27:47.107] [main] [info] update#setState idle
+[2020-01-30 01:27:30.427] [main] [info] update#setState checking for updates
+[2020-01-30 01:28:35.642] [main] [info] update#setState idle
+[2020-01-30 02:27:37.160] [main] [info] update#setState checking for updates
+[2020-01-30 02:27:47.361] [main] [error] Error: net::ERR_NAME_NOT_RESOLVED
+[2020-01-30 02:27:47.361] [main] [info] update#setState idle
+[2020-01-30 03:27:38.378] [main] [info] update#setState checking for updates
+[2020-01-30 03:27:43.141] [main] [info] update#setState idle
+[2020-01-30 04:27:46.308] [main] [info] update#setState checking for updates
+[2020-01-30 04:28:49.888] [main] [info] update#setState idle
+[2020-01-30 05:28:12.569] [main] [info] update#setState checking for updates
+[2020-01-30 05:31:18.024] [main] [info] update#setState idle
+[2020-01-30 06:29:11.175] [main] [info] update#setState checking for updates
+[2020-01-30 06:29:12.380] [main] [info] update#setState idle
+[2020-01-30 07:29:15.601] [main] [info] update#setState checking for updates
+[2020-01-30 07:30:10.619] [main] [info] update#setState idle
+[2020-01-30 08:29:35.388] [main] [info] update#setState checking for updates
+[2020-01-30 08:31:22.539] [main] [info] update#setState idle
+[2020-01-30 09:30:18.652] [main] [info] update#setState checking for updates
+[2020-01-30 09:33:05.792] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 09:33:10.195] [main] [info] update#setState idle
+[2020-01-30 10:32:13.165] [main] [info] update#setState checking for updates
+[2020-01-30 10:37:40.335] [main] [info] update#setState idle
+[2020-01-30 11:34:45.363] [main] [info] update#setState checking for updates
+[2020-01-30 11:38:03.414] [main] [info] update#setState idle
+[2020-01-30 12:35:55.458] [main] [info] update#setState checking for updates
+[2020-01-30 12:39:11.861] [main] [info] update#setState idle
+[2020-01-30 13:37:12.258] [main] [info] update#setState checking for updates
+[2020-01-30 13:40:41.515] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 13:40:46.752] [main] [info] update#setState idle
+[2020-01-30 14:39:40.318] [main] [info] update#setState checking for updates
+[2020-01-30 14:44:47.569] [main] [info] update#setState idle
+[2020-01-30 15:41:47.735] [main] [info] update#setState checking for updates
+[2020-01-30 15:46:09.180] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 15:46:17.343] [main] [info] update#setState idle
+[2020-01-30 16:44:04.634] [main] [info] update#setState checking for updates
+[2020-01-30 16:48:31.253] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 16:48:35.648] [main] [info] update#setState idle
+[2020-01-30 17:46:43.552] [main] [info] update#setState checking for updates
+[2020-01-30 17:51:49.026] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 17:51:56.750] [main] [info] update#setState idle
+[2020-01-30 18:50:10.996] [main] [info] update#setState checking for updates
+[2020-01-30 18:55:16.354] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 18:55:22.194] [main] [info] update#setState idle
+[2020-01-30 19:54:35.462] [main] [info] update#setState checking for updates
+[2020-01-30 20:00:42.027] [main] [error] Error: net::ERR_TIMED_OUT
+[2020-01-30 20:00:49.593] [main] [info] update#setState idle
+[2020-01-30 21:08:02.507] [main] [info] update#setState checking for updates
+[2020-01-30 21:08:38.583] [main] [info] update#setState idle
+[2020-01-30 22:08:19.043] [main] [info] update#setState checking for updates
+[2020-01-31 09:35:07.950] [main] [info] update#setState idle

@@ -1,0 +1,1777 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /root/dashboard
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/views/custom_api.py
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_edit.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :diffbot_dashboard/views/custom_api.py
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :diffbot_dashboard/views/custom_api.py
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/views/custom_api.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/webpack/js/custom_api.js
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_render_field.html
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_fields.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing_aaa
+> git rev-parse --symbolic-full-name rick_testing_aaa@{u}
+fatal: no upstream configured for branch 'rick_testing_aaa'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :diffbot_dashboard/webpack/js/custom_api.js
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /scripts/SLACK_ROLES
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git check-ignore -v -z --stdin
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git status -z -u
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /scripts/sales-renewal-alerts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :sales-renewal-alerts
+> git check-ignore -v -z --stdin
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :sales-renewal-alerts
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git check-ignore -v -z --stdin
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git status -z -u
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git status -z -u
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing2
+> git rev-parse --symbolic-full-name rick_testing2@{u}
+fatal: no upstream configured for branch 'rick_testing2'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :diffbot_dashboard/templates/diffbot_dashboard/custom_api/api_preview.html
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git show :diffbot_dashboard/webpack/js/custom_api.js
+> git check-ignore -v -z --stdin
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git show :roles/sales-renewal-alerts/files/var/www/cgi-bin/sales-renewal-alerts
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /root/support_tools
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse issue11
+> git rev-parse --symbolic-full-name issue11@{u}
+fatal: no upstream configured for branch 'issue11'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :templates/tools/custombilling_add.html
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :templates/tools/custombilling.html
+> git check-ignore -v -z --stdin
+> git show :templates/tools/modifyplan.html
+> git show :templates/tools/custombilling.html
+> git show :templates/tools/modifyplan.html
+> git show :templates/tools/custombilling.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse issue11
+> git rev-parse --symbolic-full-name issue11@{u}
+fatal: no upstream configured for branch 'issue11'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :templates/tools/modifyplan.html
+> git show :templates/tools/custombilling.html
+> git show :templates/tools/modifyplan.html
+> git show :templates/tools/custombilling.html
+> git check-ignore -v -z --stdin
+> git show :application/tools/views.py
+> git check-ignore -v -z --stdin
+> git show :application/tools/forms.py
+> git check-ignore -v -z --stdin
+> git show :application/tools/models.py
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :templates/tools/modifyplan.html
+> git show :templates/tools/custombilling.html
+> git show :templates/tools/modifyplan.html
+> git show :templates/tools/custombilling.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse issue11
+> git rev-parse --symbolic-full-name issue11@{u}
+fatal: no upstream configured for branch 'issue11'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :templates/tools/modifyplan.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/modifyplan.html
+> git show :application/tools/views.py
+> git show :application/tools/models.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git show :templates/tools/modifyplan.html
+> git show :application/tools/forms.py
+> git show :templates/tools/modifyplan.html
+> git show :application/tools/forms.py
+> git show :templates/tools/modifyplan.html
+> git show :application/tools/models.py
+> git show :templates/tools/custombilling.html
+> git show :application/tools/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse issue11
+> git rev-parse --symbolic-full-name issue11@{u}
+fatal: no upstream configured for branch 'issue11'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :templates/tools/custombilling.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse issue11
+> git rev-parse --symbolic-full-name issue11@{u}
+fatal: no upstream configured for branch 'issue11'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git show :templates/tools/custombilling.html
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :application/tools/views.py
+> git show :application/tools/models.py
+> git show :templates/tools/modifyplan.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :templates/tools/jobs.html
+> git check-ignore -v -z --stdin
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobs.html
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobs.html
+> git show :application/tools/views.py
+> git show :templates/tools/jobs.html
+> git show :application/tools/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :templates/tools/jobs.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :application/tools/views.py
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :templates/tools/jobs.html
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobdetail.html
+> git check-ignore -v -z --stdin
+> git show :templates/tools/jobdetailssection.html
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobdetailssection.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobs.html
+> git show :templates/tools/jobdetail.html
+> git show :templates/tools/jobdetailssection.html
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /scripts/sales-overage-calculator
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :sales-overage-calculator
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :templates/tools/account.html
+> git check-ignore -v -z --stdin
+> git show :application/tools/views.py
+> git show :templates/tools/account.html
+> git show :sales-overage-calculator
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :sales-overage-calculator
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing3
+> git rev-parse --symbolic-full-name rick_testing3@{u}
+fatal: no upstream configured for branch 'rick_testing3'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing3
+> git rev-parse --symbolic-full-name rick_testing3@{u}
+fatal: no upstream configured for branch 'rick_testing3'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :roles/sales-overage-calculator/files/var/www/cgi-bin/sales-overage-calculator
+> git show :sales-overage-calculator
+> git rev-parse --show-toplevel
+fatal: not a git repository (or any of the parent directories): .git
+> git show :sales-overage-calculator
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing3
+> git rev-parse --symbolic-full-name rick_testing3@{u}
+fatal: no upstream configured for branch 'rick_testing3'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse rick_testing3
+> git rev-parse --symbolic-full-name rick_testing3@{u}
+fatal: no upstream configured for branch 'rick_testing3'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/rick/docs
+> git status -z -u
+> git show :website/sidebars.json
+> git symbolic-ref --short HEAD
+> git rev-parse docs-collab
+> git rev-parse --symbolic-full-name docs-collab@{u}
+fatal: no upstream configured for branch 'docs-collab'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -v -z --stdin
+> git config --get commit.template
+> git show :sales-overage-calculator
+> git check-ignore -v -z --stdin
+> git show :website/sidebars.json
+> git check-ignore -v -z --stdin
+> git show :website/i18n/en.json
+> git show :website/i18n/en.json
+> git show :sales-overage-calculator
+> git show :website/i18n/en.json
+> git check-ignore -v -z --stdin
+> git show :website/siteConfig.js
+> git check-ignore -v -z --stdin
+> git show :website/static/js/app.js
+> git show :website/siteConfig.js
+> git show :website/static/js/app.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse docs-collab
+> git rev-parse --symbolic-full-name docs-collab@{u}
+fatal: no upstream configured for branch 'docs-collab'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git show :website/static/js/app.js
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/rick/docs/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/rick/docs/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:165:26)
+	at Object.watch (fs.js:1270:11)
+	at Object.t.watch (/usr/share/code/resources/app/extensions/git/dist/main.js:1:591370)
+	at E.updateTransientWatchers (/usr/share/code/resources/app/extensions/git/dist/main.js:1:123066)
+	at l.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:913)
+	at T.updateModelState (/usr/share/code/resources/app/extensions/git/dist/main.js:1:141851)
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/home/rick/docs/.git/refs/remotes/origin/master', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/home/rick/docs/.git/refs/remotes/origin/master'
+	at FSWatcher.start (internal/fs/watchers.js:165:26)
+	at Object.watch (fs.js:1270:11)
+	at Object.t.watch (/usr/share/code/resources/app/extensions/git/dist/main.js:1:591370)
+	at E.updateTransientWatchers (/usr/share/code/resources/app/extensions/git/dist/main.js:1:123066)
+	at l.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:46:913)
+	at T.updateModelState (/usr/share/code/resources/app/extensions/git/dist/main.js:1:141851)
+> git config --get commit.template

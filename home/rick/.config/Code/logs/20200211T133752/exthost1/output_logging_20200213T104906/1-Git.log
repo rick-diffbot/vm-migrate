@@ -1,0 +1,8 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /root/support_tools
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git show :templates/tools/customplans.html

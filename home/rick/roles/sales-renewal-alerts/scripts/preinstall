@@ -1,0 +1,20 @@
+#!/bin/bash 
+
+set -e
+
+PACKAGES="ruby"
+for PACKAGE in $PACKAGES; do
+    if ! dpkg -l $PACKAGE 2>/dev/null|grep -q "^ii"; then
+        apt-get update && apt-get -y install $PACKAGES
+        break
+    fi
+done
+
+if ! gem list|grep -q "^google_drive "; then
+    gem install google_drive
+fi
+
+if ! gem list|grep -q "^mail "; then
+    gem install mail
+fi
+

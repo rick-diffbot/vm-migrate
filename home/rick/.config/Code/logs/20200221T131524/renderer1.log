@@ -1,0 +1,6 @@
+[2020-02-21 13:15:43.312] [renderer1] [error] Error: [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/root/dropdownfix/support_tools/templates/tools/newtoken.html'
+[2020-02-21 13:15:43.323] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/root/dropdownfix/support_tools/templates/tools/newtoken.html'
+[2020-02-25 14:57:59.542] [renderer1] [error] Unable to read file (Error: File not found (/root/dropdownfix/support_tools/templates/tools/newtoken.html)): Error: Unable to read file (Error: File not found (/root/dropdownfix/support_tools/templates/tools/newtoken.html))
+    at _.doReadAsFileStream (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1591:434)
+[2020-02-25 14:57:59.676] [renderer1] [error] Error: Unable to read file (Error: File not found (vscode-userdata:/home/rick/.config/Code/User/Backups/1579635424761/file/567fd8532b82dcbb69ca5f088dd2f84b))
+    at _.doReadAsFileStream (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1591:434)

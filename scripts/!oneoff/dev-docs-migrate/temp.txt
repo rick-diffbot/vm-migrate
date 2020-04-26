@@ -1,0 +1,3 @@
+<!--<p>If <code>&stats</code> is passed, you will receive a confidence breakdown across all possible page-types. The following shows the output from a YouTube page, which is most likely a "video" page in the <code>types</code> array:
+<div class="indent">
+-->

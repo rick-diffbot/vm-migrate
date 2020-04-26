@@ -1,0 +1,890 @@
+#!/usr/bin/ruby
+
+# A script to receive the challenge token for a Slack app verification and return it
+
+require "cgi"
+require "json"
+require "net/http"
+require "uri"
+require "faraday"
+require "money"
+
+###### REPLACE PUBLIC IMAGES WITH SLACK EMOJI
+
+
+##### Do we need net/http anymore?
+
+cgi = CGI.new
+print cgi.header
+params = cgi.params.first[0]
+jsonHash = JSON.parse(params)
+
+#diffbotTokenFile = "/scripts/slack-diffbot/.dbtoken"
+diffbotTokenFile = "/var/www/slack-kg-integration/dbtoken"
+diffbotToken = File.open(diffbotTokenFile,"r").readlines[0].chomp
+
+#oauthTokenFile = "/scripts/slack-diffbot/.oauth"
+oauthTokenFile = "/var/www/slack-kg-integration/oauth"
+oauthToken = File.open(oauthTokenFile,"r").readlines[0].chomp
+
+#temp="/temp/temp"
+
+colorbar1 = "#36a64f"   ####################################
+
+
+
+def retrieve_entity_data(dbtoken, url)     
+    entityId = url.split("/").last.gsub(".json", "")
+    newUrl = "https://kg.diffbot.com/kg/dql_endpoint?type=query&token=#{dbtoken}&query=id%3A#{entityId}"
+
+    conn = Faraday.new(:url => newUrl)
+    response = Faraday.get(newUrl)
+    json = JSON.parse(response.body)
+    # get message type
+    data = json["data"][0]
+
+    allTypes = ["Article", "Corporation", "DegreeEntity", "Discussion", "EducationMajorEntity", "EmploymentCategory", "Image", "Intangible", "Miscellaneous", "Organization", "Person", "Place", "Product", "Skill", "Video"]
+   
+    if ([data["type"]] & allTypes) == []
+        unless data["types"] == nil
+            allMatchingTypes = (data["types"] & allTypes)
+            unless allMatchingTypes == []
+                type = allMatchingTypes[0]
+            else
+                exit
+            end
+        end
+    else
+        type = data["type"]
+    end 
+
+    blocks = Array.new(20) { |i| {} }
+
+    @temp = "/temp/temp"
+
+    case type
+    when "Article" # ART959271
+        title = data["title"]
+        if data.key? "date"
+            timestamp = data["date"]["timestamp"]
+            dateString = Time.at(timestamp/1000).strftime("%B %d, %Y")
+        else
+            dateString = nil
+        end
+        text = data["text"].nil? ? "<No Article Text Available>" : data["text"].split(/\n+/).join("\n\n")
+        if text.length > 2900 # slack has a character limit of 3000 for a block
+            text = text[0..2900] + "..."
+        end
+
+        img = data.key?("images") ? data["images"][0] : nil
+        siteName = data.key?("siteName") ? "<#{data["diffbotUri"]}|#{data["siteName"]}>" : nil
+        author = data["author"].nil? ? nil : "<https://app.diffbot.com/search/?query=type:Article+strict:author:\"#{data["author"].gsub(" ", "+")}\"+&from=0&size=50&active_tab=visual&kgversion=|#{data["author"]}>"
+        tags = data["tags"]  ### This can come back as nil
+        pageUrl = data["pageUrl"]
+
+        blocks[0]["type"] = "context"
+        blocks[0]["elements"] = []
+        blocks[0]["elements"][0] = {}
+        blocks[0]["elements"][0]["type"] = "mrkdwn"
+        blocks[0]["elements"][0]["text"] = ":rolled_up_newspaper: "
+        blocks[0]["elements"][0]["text"] += title == nil ? "<No Title Available>" : "*#{title}*\n       "
+        blocks[0]["elements"][0]["text"] += [siteName, dateString, author].compact.join("  -  ")
+        
+        blocks[1]["type"] = "divider"
+        unless text == nil
+            blocks[2]["type"] = "section"
+            blocks[2]["text"] = {}
+            blocks[2]["text"]["type"] = "mrkdwn"
+            blocks[2]["text"]["text"] = text
+            unless img == nil
+                blocks[2]["accessory"] = {}
+                blocks[2]["accessory"]["type"] = "image"
+                blocks[2]["accessory"]["image_url"] = img["url"]
+                blocks[2]["accessory"]["alt_text"] = img["title"] || "Article Image"
+            end
+        end
+        blocks[3]["type"] = "divider"
+        unless tags == nil || tags.length == 0
+            blocks[4]["type"] = "actions"
+            blocks[4]["elements"] = []
+            for t in (tags.sort_by { |tag| tag["score"] })[0..24]
+                button = {}
+                button["type"] = "button"
+                button["text"] = {
+                    "type" => "plain_text",
+                    "text" => t["label"]
+                }
+                button["url"] = t["uri"]
+                blocks[4]["elements"].push button
+            end
+        end
+
+        blocks[5]["type"] = "divider"
+
+        blocks[6]["type"] = "section"
+        blocks[6]["text"] = {}
+        blocks[6]["text"]["type"] = "mrkdwn"
+        blocks[6]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+
+        blocks.delete_if &:empty?
+        #File.write("/temp/blocks", blocks.to_json)
+
+    when "Corporation", "Organization" # Ccu9m08_OO9icw1n7OgsaTg , CUFq-3WlpNsq0pvfUYWXOEA
+        name = data["name"]
+        description = data["description"]
+        if data.key?("images") && data["images"].length != 0
+            primary = data["images"].detect {|i| i["primary"] == true}
+            if primary == nil # if no images are primary
+                img = data["images"][0]["url"] # then use first image
+            else
+                img = primary["url"] # else use primary image
+            end
+        else
+            img = nil
+        end
+
+        unless data["location"] == nil
+            loc = data["location"]
+            #street = loc["street"]
+            city = loc.key?("city") ? "<#{loc["city"]["diffbotUri"]}|#{loc["city"]["name"]}>" : nil
+            region = loc.key?("region") ? "<#{loc["region"]["diffbotUri"]}|#{loc["region"]["name"]}>" : nil
+            subregion = loc.key?("subregion") ? "<#{loc["subregion"]["diffbotUri"]}|#{loc["subregion"]["name"]}>" : nil
+            country = loc.key?("country") ? "<#{loc["country"]["diffbotUri"]}|#{loc["country"]["name"]}>" : nil
+            locationString = [city || subregion, region, country].compact.join(", ")
+            locationStringShort = [city || subregion, region].compact.join(", ")
+        else
+            locationString = nil
+        end
+
+        homepageUri = data["homepageUri"]
+        angellistUri = data["angellistUri"]
+        wikipediaUri = data["wikipediaUri"]
+        facebookUri = data["facebookUri"]
+        crunchbaseUri = data["crunchbaseUri"]
+        linkedInUri = data["linkedInUri"]
+        twitterUri = data["twitterUri"]
+        blogUri = data["blogUri"]
+        githubUri = data["githubUri"]
+        nbEmployeesMax = data["nbEmployeesMax"]
+        nbEmployeesMin = data["nbEmployeesMin"]
+        nbEmployeesString = data["nbEmployeesMax"] == nil ? nil : "#{nbEmployeesMin.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}-#{nbEmployeesMax.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}" 
+        foundingDateString = data.key?("foundingDate") ? Time.at(data["foundingDate"]["timestamp"]/1000).strftime("%B %d, %Y") : nil
+        categories = data["categories"]  ### This can come back as nil
+        yearlyRevenues = data["yearlyRevenues"]
+        unless yearlyRevenues == nil
+            yearlyRevenueCurrent = yearlyRevenues.detect{|rev| rev["isCurrent"] == true}
+            revenueCurrency = yearlyRevenueCurrent["revenue"]["currency"]
+            if Money::Currency.table.keys.include? revenueCurrency.downcase.to_sym
+                revenueCurrencySymbol = Money::Currency.new(revenueCurrency.downcase.to_sym).symbol
+            else
+                revenueCurrencySymbol = nil
+            end
+            revenue = yearlyRevenueCurrent["revenue"]["value"]
+            revenueString = revenue.to_i.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse + " " + revenueCurrency
+            unless revenueCurrencySymbol.nil?
+                revenueString = revenueCurrencySymbol + revenueString
+            end
+        else
+            revenueString = nil
+        end
+        isDissolved = data["isDissolved"]
+        #Grab articles from https://app.diffbot.com/search/?query=type:Article%20tags.uri:%22http://diffbot.com/entity/Ccu9m08_OO9icw1n7OgsaTg%22@.55%20sortBy:date.timestamp = data["Grab articles from https://app.diffbot.com/search/?query=type:Article%20tags.uri:%22http://diffbot.com/entity/Ccu9m08_OO9icw1n7OgsaTg%22@.55%20sortBy:date.timestamp"]
+        if data.key?("ceo")
+            ceo = data["ceo"]["name"]
+            ceoDiffbotUri = data["ceo"]["diffbotUri"]
+        else
+            ceo = ceoDiffbotUri = nil
+        end
+        logo = data["logo"]
+        industry = data["industries"][0].gsub(/\w+/, &:capitalize)
+
+        blocks[0]["type"] = "context"
+        blocks[0]["elements"] = []
+        blocks[0]["elements"][0] = {}
+        blocks[0]["elements"][1] = {}
+        blocks[0]["elements"][1]["type"] = "mrkdwn"
+        blocks[0]["elements"][1]["text"] = ""
+        blocks[0]["elements"][1]["text"] += ":office: "  # We use office emoji instead of logo because Slack intermittently does not like DB urls for images
+        blocks[0]["elements"][1]["text"] += homepageUri.nil? ? "*#{name}*" : "<http://#{homepageUri}|*#{name}*>\n       "
+        blocks[0]["elements"][1]["text"] += locationStringShort unless locationStringShort.nil?
+        blocks[0]["elements"].delete_if &:empty?
+     
+        blocks[1]["type"] = "divider"
+        
+        unless description.nil?
+            blocks[2]["type"] = "section"
+            blocks[2]["text"] = {}
+            blocks[2]["text"]["type"] = "mrkdwn"
+            blocks[2]["text"]["text"] = "#{description}"
+        end
+
+        blocks[3]["type"] = "divider"
+
+
+        fields = []
+        for field in [["*Industry:*\n", industry],["*Annual Revenue:*\n",revenueString],["*Number of Employees:*\n", nbEmployeesString],["*CEO:*\n", ceo],["*Founding Date:*\n", foundingDateString],["*Location:*\n",locationString]]
+            unless field[1].nil?
+                fields.push field[0] + field[1]
+            end
+        end
+       
+        blocks[4]["type"] = "section"
+        blocks[4]["fields"] = []
+        i = 1
+        fields.each do |f|
+            if(i % 2 == 0)
+                f += "\n>"
+            end
+            field = {"type" => "mrkdwn", "text" => f}
+            blocks[4]["fields"].push field
+            i += 1
+        end
+
+
+
+        #blockElementNo = 4  # THIS NUMBER SHOULD BE EQUAL TO THE NEXT BLOCK TO BE DEFINED.  IF WE ADD BLOCKS ABOVE THIS NUMBER MUST CHANGE
+        #fieldSlices = fields.each_slice(2).to_a
+        #fieldSlices.each do |slice|
+         #   blocks[blockElementNo]["type"] = "section"
+        #    blocks[blockElementNo]["fields"] = []
+        #    for fieldText in slice
+        #        field = {"type" => "mrkdwn", "text" => fieldText}
+        #        blocks[blockElementNo]["fields"].push field
+        #    end
+        #    blockElementNo += 1
+        #end
+
+        blocks[7]["type"] = "divider"
+
+        fields = []
+        for field in [["*Wikipedia:*\n", wikipediaUri],["*Facebook:*\n",facebookUri],["*Twitter:*\n",twitterUri],["*LinkedIn:*\n", linkedInUri],["*Company Blog:*\n", blogUri],["*Github:*\n", githubUri],["*AngelList:*\n", angellistUri],["*Crunchbase:*\n", crunchbaseUri]]
+            unless field[1].nil?
+                fields.push "#{field[0]}http://#{field[1]}"
+            end
+        end
+        
+        blocks[8]["type"] = "section"
+        blocks[8]["fields"] = []
+        i = 1
+        fields.each do |f|
+            field = {"type" => "mrkdwn", "text" => f}
+            blocks[8]["fields"].push field
+            i += 1
+        end
+
+        blocks[12]["type"] = "divider"
+
+        blocks[13]["type"] = "section"  #### Since this section is the same for every entity type, we can write a method
+        blocks[13]["text"] = {}
+        blocks[13]["text"]["type"] = "mrkdwn"
+        blocks[13]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+        blocks[13]["text"]["text"] += "  |  <http://#{homepageUri}|Homepage>\n>" unless homepageUri.nil?
+
+
+    when "DegreeEntity", "EducationMajorEntity", "EmploymentCategory"
+        name = data["name"].gsub(/\w+/, &:capitalize)  ######### IS IT SAFE TO CAPITALIZE ALL WORDS HERE????
+
+        blocks[0]["type"] = "section"
+        blocks[0]["text"] = {}
+        blocks[0]["text"]["type"] = "mrkdwn"
+        blocks[0]["text"]["text"] = "*Type:*  #{type}\n*Name:*  #{name}\n>"
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "section"
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"
+        blocks[2]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+
+
+    when "Discussion"  # DISC226160213
+        title = data["title"]
+        tags = data["tags"]   ### This can come back as nil
+        pageUrl = data["pageUrl"]
+        numPosts = data["numPosts"]
+        if data["posts"][0].key?("date")
+            threadBegan = threadBegan = data["posts"][0]["date"]["timestamp"]
+            threadBeganString = Time.at(threadBegan/1000).strftime("%B %d, %Y")
+        else
+            threadBegan = threadBeganString = nil
+        end
+
+        blocks[0]["type"] = "section"
+        blocks[0]["text"] = {}
+        blocks[0]["text"]["type"] = "mrkdwn"
+        blocks[0]["text"]["text"] = "*Type:*  #{type}\n*Thread Title:*  #{title}\n*Date Started:*  #{threadBeganString}\n*Number of Posts:*  #{numPosts}\n>"
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "section"  
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"  
+        blocks[2]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>   |   <#{pageUrl}|Discussion>"
+
+
+    when "Image"
+        title = data["title"]
+        url = data["url"]
+        naturalWidth = data["naturalWidth"]
+        naturalHeight = data["naturalHeight"] 
+
+        blocks[0]["type"] = "section"
+        blocks[0]["text"] = {}
+        blocks[0]["text"]["type"] = "mrkdwn"
+        blocks[0]["text"]["text"] = "*Type:*  #{type}\n*Title:*  #{title}\n*Width:*  #{naturalWidth} px\n*Height:*  #{naturalHeight} px\n>"
+
+        blocks[1]["type"] = "image"
+        blocks[1]["title"] = {}
+        blocks[1]["title"]["type"] = "plain_text"
+        blocks[1]["title"]["text"] = "#{title}"
+        blocks[1]["image_url"] = "#{url}"
+        blocks[1]["alt_text"] = "#{title}"
+
+        blocks[2]["type"] = "section"  
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"  
+        blocks[2]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>   |   <#{url}|Image>"
+
+
+    when "Intangible", "Miscellaneous", "Skill" # r-tQhGFUhNfuBgL8Hs0TBXA , XSRyD6k-vPri1H0A8KswEPA , sbS1qsaavOLWKA4xkJIJp_A
+        name = data["name"].gsub(/\w+/, &:capitalize)  ######### IS IT SAFE TO CAPITALIZE ALL WORDS HERE????
+        description = data["description"]
+
+        blocks[0]["type"] = "section"
+        blocks[0]["text"] = {}
+        blocks[0]["text"]["type"] = "mrkdwn"
+        blocks[0]["text"]["text"] = "*Type:*  #{type}\n>\n*Name:*  #{name}\n>\n*Description:*  #{description}"
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "section"  
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"  
+        blocks[2]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+
+
+    when "Person" # PLRjYYrSlOUepmhI_5VoNAQ
+        description = data["description"]
+        name = data["name"].gsub(/\w+/, &:capitalize)
+        if data.key?("images") && data["images"].length != 0
+            primary = data["images"].detect {|i| i["primary"] == true}
+            if primary == nil # if no images are primary
+                img = data["images"][0]["url"] # then use first image
+            else
+                img = primary["url"] # else use primary image
+            end
+        else
+            img = nil
+        end
+        if data.key?("locations") && data["locations"].length != 0
+            locations = data["locations"]
+            current = locations.detect {|i| i["isCurrent"] == true}
+            if current == nil # if no images are primary
+                location = locations[0]["address"] # then use first image
+            else
+                location = current["address"]
+            end
+        else
+            location = nil
+        end
+        homepageUri = data["homepageUri"]
+        angellistUri = data["angellistUri"]
+        wikipediaUri = data["wikipediaUri"]
+        facebookUri = data["facebookUri"]
+        crunchbaseUri = data["crunchbaseUri"]
+        linkedInUri = data["linkedInUri"]
+        twitterUri = data["twitterUri"]
+        blogUri = data["blogUri"]
+        githubUri = data["githubUri"]
+
+        if data["employments"] && data["employments"].length > 0
+            employments = data["employments"].reject {|e| e["employer"] == nil}
+            if data["employments"][0]["isCurrent"]
+                employmentString = "#{data["employments"][0]["title"]}, <#{data["employments"][0]["employer"]["diffbotUri"]}|#{data["employments"][0]["employer"]["name"]}>"
+            else
+                employmentString = nil
+            end
+        end
+        
+        birthDate = data.key?("birthdate") ? data["birthDate"]["timestamp"] : nil
+        skills = data["skills"].nil? ? nil : (data["skills"].reject {|s| s["diffbotUri"] == nil})[0..24]
+
+        educations = data["educations"]
+        languages = data["languages"]
+        languageArray = []
+        unless languages == nil
+            languages.each do |language|
+                languageArray.push language["str"]
+            end
+            languageString = languageArray.join(", ")
+        end
+        #File.write("/temp/languages", languages.inspect)
+        #File.write("/temp/languageArray", languageArray.inspect)
+
+              # has keys ["institution", "isCurrent", "major", "degree", "from", "to"]
+        #educations[n]["institution"]["name"] = data["educations[n]["institution"]["name"]"]
+        #educations[n]["isCurrent"] = data["educations[n]["isCurrent"]"]
+        #educations[n]["major"]["name"] = data["educations[n]["major"]["name"]"]
+        #educations[n]["degree"]["name"] = data["educations[n]["degree"]["name"]"]
+        #educations[n]["from"]["timestamp"] = data["educations[n]["from"]["timestamp"]"]
+        #educations[n]["to"]["timestamp"] = data["educations[n]["to"]["timestamp"]"]
+        
+        blocks[0]["type"] = "context"
+        blocks[0]["elements"] = []
+        blocks[0]["elements"][0] = {}
+        blocks[0]["elements"][0]["type"] = "mrkdwn"
+        blocks[0]["elements"][0]["text"] = ""
+        #if img != nil
+        #    blocks[0]["elements"][1] = {}
+        #    blocks[0]["elements"][1]["type"] = "image"
+        #    blocks[0]["elements"][1]["image_url"] = img
+        #    blocks[0]["elements"][1]["alt_text"] = name
+        #else 
+        #    blocks[0]["elements"][0]["text"] += ":male-office-worker: "
+        #end
+
+        blocks[0]["elements"][0]["text"] += "<https://app.diffbot.com/entity/#{entityId}|*#{name}*>\n" #== nil ? "<No Name Available>" : "*#{name}*    "
+        blocks[0]["elements"][0]["text"] += "#{employmentString}" unless employmentString == nil
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "section"
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"
+        blocks[2]["text"]["text"] = "#{description || "<No Description Available>"}\n>"
+
+        unless img == nil
+            blocks[2]["accessory"] = {}
+            blocks[2]["accessory"]["type"] = "image"
+            blocks[2]["accessory"]["image_url"] = img
+            blocks[2]["accessory"]["alt_text"] = name
+        end
+
+
+        blocks[3]["type"] = "divider"
+
+        blocks[4]["type"] = "section"
+        fields = []
+        for field in [["*Current Employment:*\n", employmentString],["*Location:*\n", location],["*Date of Birth:*\n", birthDate],["*Languages:*\n", languageString]]
+            unless field[1].nil?
+                fields.push "#{field[0]}#{field[1]}"
+            end
+        end
+        blocks[4]["fields"] = []
+        fields.each do |f|
+            field = { "type" => "mrkdwn", "text" => f }
+            blocks[4]["fields"].push field
+        end
+        blocks[4]["fields"].last["text"] += "\n>"
+
+        blocks[5]["type"] = "divider"
+
+        blocks[6]["type"] = "section"
+        blocks[6]["text"] = {}
+        blocks[6]["text"]["type"] = "mrkdwn"
+        blocks[6]["text"]["text"] = "*Employment History*\n\n"
+        
+        truncated = false
+        employments.each do |e|
+            if e["isCurrent"] == true
+                employedTo = "Present"
+            else
+                if e["to"]
+                    employedTo = e["to"]["str"].gsub("d","")  # gsub here is a temporary solution until we actually nail down the date formatting
+                else
+                    employedTo = "?"
+                end
+            end
+            if e["from"]
+                employedFrom = e["from"]["str"].gsub("d","")  # gsub here is a temporary solution until we actually nail down the date formatting
+            else
+                employedFrom = "?"
+            end
+
+            unless (employedTo == "Present" || employedTo == "?") && employedFrom == "?"
+                employmentDateString = "#{employedFrom} - #{employedTo}"
+            else
+                if employedTo == "?"
+                    employmentDateString = nil
+                else
+                    employmentDateString = "Present"
+                end
+            end
+            
+            if e["title"]
+                employmentTitle = "_#{e["title"]}_" 
+            end
+
+            employmentEmployer = e["employer"].key?("name") ? e["employer"]["name"] : nil
+
+            if e["employer"].key?("name")
+                employmentEmployer = e["employer"]["name"]
+                if e["employer"].key?("diffbotUri")
+                    employmentEmployer = "<#{e["employer"]["diffbotUri"]}|#{employmentEmployer}>"
+                end
+            else
+                employmentEmployer = nil
+            end
+
+            empString = [employmentDateString, employmentTitle, employmentEmployer].compact.join("\n")
+            
+            unless blocks[6]["text"]["text"].length + empString.length > 2900
+                blocks[6]["text"]["text"] += "#{empString}\n\n" 
+            else
+                truncated = true
+            end
+        end
+
+        if truncated == true
+            blocks[6]["text"]["text"] += "_<Employments Truncated>_"
+        end
+        blocks[6]["text"]["text"] = blocks[6]["text"]["text"][0..2900]
+
+
+
+        blocks[7]["type"] = "divider"
+
+        blocks[8]["type"] = "section"
+        blocks[8]["text"] = {}
+        blocks[8]["text"]["type"] = "mrkdwn"
+        blocks[8]["text"]["text"] = "*Education*\n\n"
+     
+        truncated = false
+        educations.each do |e|
+            if e["isCurrent"] == true
+                educationEnded = "Present"
+            else
+                if e["to"]
+                    educationEnded = e["to"]["str"].gsub("d","")  # gsub here is a temporary solution until we actually nail down the date formatting
+                else
+                    educationEnded = "?"
+                end
+            end
+
+            if e["from"]
+                educationBegan = e["from"]["str"].gsub("d","")  # gsub here is a temporary solution until we actually nail down the date formatting
+            else
+                educationBegan = "?"
+            end
+
+            unless (educationEnded == "Present" || educationEnded == "?") && educationBegan == "?"
+                educationDateString = "#{educationBegan} - #{educationEnded}"
+            else
+                if educationEnded == "?"
+                    educationDateString = nil
+                else
+                    educationDateString = "Present"
+                end
+            end
+            
+            if e["major"] && e["major"].key?("name")
+                majorAndProgramString = "_#{e["major"]["name"]}_"
+                if e["degree"]
+                    majorAndProgramString += e["degree"].key?("name") ? " - #{e["degree"]["name"]}" : ""
+                end
+            else
+                majorAndProgramString = nil
+            end
+
+            institution = e.key?("institution") && e["institution"].key?("name") ? "<#{e["institution"]["diffbotUri"]}|#{e["institution"]["name"]}>" : nil
+
+            eduString = [educationDateString, majorAndProgramString, institution].compact.join("\n")
+#=begin         
+            unless blocks[8]["text"]["text"].length + eduString.length > 2900
+                blocks[8]["text"]["text"] += "#{eduString}\n\n" 
+            else
+                truncated = true
+            end
+#=end
+        end
+        
+        if truncated == true
+            blocks[8]["text"]["text"] += "_<Employments Truncated>_"
+        end
+
+
+
+        unless skills.nil? || skills.length == 0
+            blocks[9]["type"] = "divider"
+
+            blocks[10]["type"] = "section"
+            blocks[10]["text"] = {}
+            blocks[10]["text"]["type"] = "mrkdwn"
+            blocks[10]["text"]["text"] = "*Skills*"
+
+            blocks[11]["type"] = "actions"
+            blocks[11]["elements"] = []
+            for s in skills
+                button = {}
+                button["type"] = "button"
+                button["text"] = {
+                    "type" => "plain_text",
+                    "text" => s["name"].gsub(/\w+/, &:capitalize)
+                }
+                button["url"] = s["diffbotUri"]
+                blocks[11]["elements"].push button
+            end
+        end
+            
+
+
+
+
+        blocks[12]["type"] = "divider"
+
+        blocks[13]["type"] = "section"
+        fields = []
+        for field in [["*Wikipedia:*\n", wikipediaUri],["*Facebook:*\n",facebookUri],["*Twitter:*\n",twitterUri],["*LinkedIn:*\n", linkedInUri],["*Company Blog:*\n", blogUri],["*Github:*\n", githubUri],["*AngelList:*\n", angellistUri],["*Crunchbase:*\n", crunchbaseUri]]
+            unless field[1].nil?
+                fields.push "#{field[0]}http://#{field[1]}"
+            end
+        end
+        blocks[13]["fields"] = []
+        fields.each do |f|
+            field = { "type" => "mrkdwn", "text" => f }
+            blocks[13]["fields"].push field
+        end
+        blocks[13]["fields"].last["text"] += "\n>"
+
+        blocks[14]["type"] = "divider"
+
+        blocks[15]["type"] = "section"  
+        blocks[15]["text"] = {}
+        blocks[15]["text"]["type"] = "mrkdwn"  
+        blocks[15]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+
+
+    when "Place" # A01d4EK33MmCosgI2KXa4-A
+        description = data["description"]
+        name = data["name"]
+        if data.key?("images") && data["images"].length != 0
+            primary = data["images"].detect {|i| i["primary"] == true}
+            if primary == nil # if no images are primary
+                img = data["images"][0]["url"] # then use first image
+            else
+                img = primary["url"]
+            end
+        else
+            img = nil
+        end
+        isPartOf = data["isPartOf"]
+        population = data["population"].to_i.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
+        placeType = data["placeType"].gsub(/\w+/, &:capitalize)
+        area = data["area"].to_i.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse  #### add string "km2"
+
+        
+        blocks[0]["type"] = "context"
+        blocks[0]["elements"] = []
+        blocks[0]["elements"][0] = {}
+        blocks[0]["elements"][0]["type"] = "mrkdwn"
+        blocks[0]["elements"][0]["text"] = "*#{name}*\n#{placeType}, part of <#{isPartOf[0]["diffbotUri"]}|#{isPartOf[0]["name"]}>\n"
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "section"
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"
+        blocks[2]["text"]["text"] = "*Description:*\n\n#{description || "<No Description Available>"}\n>"
+
+        blocks[3]["type"] = "divider"
+        
+        fields = []
+        for field in [["*Population:*\n",population],["*Area:*\n",area],["*Place Type:*\n", placeType],["*Part of:*\n", "<#{isPartOf[0]["diffbotUri"]}|#{isPartOf[0]["name"]}>"]]
+            unless field[1].nil?
+                fields.push "#{field[0]}#{field[1]}"
+            end
+        end
+        blockElementNo = 4  # THIS NUMBER SHOULD BE EQUAL TO THE NEXT BLOCK TO BE DEFINED.  IF WE ADD BLOCKS ABOVE THIS NUMBER MUST CHANGE
+        fieldSlices = fields.each_slice(2).to_a
+        fieldSlices.each do |slice|
+            blocks[blockElementNo]["type"] = "section"
+            blocks[blockElementNo]["fields"] = []
+            for fieldText in slice
+                field = { "type" => "mrkdwn", "text" => fieldText }
+                blocks[blockElementNo]["fields"].push field
+            end
+            blockElementNo += 1
+        end
+
+        blocks[6]["type"] = "divider"
+
+        blocks[7]["type"] = "section"  
+        blocks[7]["text"] = {}
+        blocks[7]["text"]["type"] = "mrkdwn"  
+        blocks[7]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+
+
+    when "Product" # PRD178018348666
+        img = data.key?("images") ? data["images"][0]["url"] : nil
+        title = data["title"]
+        pageUrl = data["pageUrl"]
+        text = data["text"]
+        offerPrice = data["offerPrice"]
+        productId = data["productId"]
+        language = data["language"]
+        availability = data["availability"]
+        sku = data["sku"]
+        brand = data["brand"]
+        category = data["category"]
+
+        blocks[0]["type"] = "context"
+        blocks[0]["elements"] = []
+        blocks[0]["elements"][0] = {}
+        blocks[0]["elements"][0]["type"] = "mrkdwn"
+        blocks[0]["elements"][0]["text"] = ":package: *#{title}*\n       <#{pageUrl}|#{URI.parse(pageUrl).host.gsub("www.","").downcase.capitalize}>"
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "section"
+        blocks[2]["text"] = {}
+        blocks[2]["text"]["type"] = "mrkdwn"
+        blocks[2]["text"]["text"] = "#{text || ""}\n"
+
+        unless img == nil
+            blocks[2]["accessory"] = {}
+            blocks[2]["accessory"]["type"] = "image"
+            blocks[2]["accessory"]["image_url"] = img
+            blocks[2]["accessory"]["alt_text"] = title
+        end
+
+        blocks[3]["type"] = "section"
+        blocks[3]["text"] = {}
+        blocks[3]["text"]["type"] = "mrkdwn"
+        blocks[3]["text"]["text"] = "*Offer Price:*  #{offerPrice}"
+
+        blocks[4]["type"] = "actions"
+        blocks[4]["elements"] = []
+        blocks[4]["elements"][0] = {}
+        blocks[4]["elements"][0]["type"] = "button"
+        blocks[4]["elements"][0]["text"] = {}
+        blocks[4]["elements"][0]["text"]["type"] = "plain_text"
+        blocks[4]["elements"][0]["text"]["text"] = "View Product"
+        blocks[4]["elements"][0]["url"] = pageUrl
+
+        blocks[5]["type"] = "divider"
+
+        blocks[6]["type"] = "section"
+        fields = []
+        for field in [["*Brand:*\n",brand],["*Category:*\n",category],["*SKU:*\n", sku],["*Availability:*\n", availability]]
+            unless field[1].nil?
+                fields.push "#{field[0]}#{field[1]}"
+            end
+        end
+        blocks[6]["fields"] = []
+        fields.each do |f|
+            field = { "type" => "mrkdwn", "text" => f }
+            blocks[6]["fields"].push field
+        end
+        blocks[6]["fields"].last["text"] += "\n>"
+
+        blocks[7]["type"] = "divider"
+
+        blocks[8]["type"] = "section"  
+        blocks[8]["text"] = {}
+        blocks[8]["text"]["type"] = "mrkdwn"  
+        blocks[8]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>"
+
+
+    when "Video" # VID111971180
+        img = data.key?("images") ? data["images"][0]["url"] : nil
+        title = data["title"]
+        pageUrl = data["pageUrl"]
+        language = data["language"]
+        url = data["url"]
+        naturalWidth = data["naturalWidth"]  ### MAY BE MISSING
+        naturalHeight = data["naturalHeight"]  ### MAY BE MISSING
+        mime = data["mime"]
+        duration = data["duration"]  ### MAY BE MISSING
+
+        blocks[0]["type"] = "context"
+        blocks[0]["elements"] = []
+        blocks[0]["elements"][0] = {}
+        blocks[0]["elements"][0]["type"] = "mrkdwn"
+        blocks[0]["elements"][0]["text"] = ":movie_camera: *#{title}*\n       <#{pageUrl}|#{URI.parse(pageUrl).host.gsub("www.","").downcase.capitalize}>"
+
+        blocks[1]["type"] = "divider"
+
+        blocks[2]["type"] = "image"
+        blocks[2]["title"] = {}
+        blocks[2]["title"]["type"] = "plain_text"
+        blocks[2]["title"]["text"] = title
+        blocks[2]["image_url"] = img unless img.nil?
+        blocks[2]["alt_text"] = title
+
+        blocks[3]["type"] = "divider"
+
+        blocks[4]["type"] = "section"
+        fields = []
+        for field in [["*Duration:*\n",duration],["*MIME Type:*\n",mime],["*Width:*\n", naturalWidth],["*Height:*\n", naturalHeight],["*Language:*\n", language]]
+            unless field[1].nil?
+                fields.push "#{field[0]}#{field[1]}"
+            end
+        end
+        blocks[4]["fields"] = []
+        fields.each do |f|
+            field = { "type" => "mrkdwn", "text" => f }
+            blocks[4]["fields"].push field
+        end
+        blocks[4]["fields"].last["text"] += "\n>"
+
+        blocks[5]["type"] = "divider"
+
+        blocks[6]["type"] = "section"  
+        blocks[6]["text"] = {}
+        blocks[6]["text"]["type"] = "mrkdwn"  
+        blocks[6]["text"]["text"] = "<https://app.diffbot.com/entity/#{entityId}.json|JSON>   |   <#{url}|Video>"
+
+    else
+    end
+
+    #File.write("/temp/blocks", blocks.inspect)
+    blocks.delete_if &:empty?
+    #File.write("/temp/blocks2", blocks.inspect)
+
+    return blocks
+end
+
+def chat_unfurl(params_hash, oauth)
+    conn = Faraday.new(:url => 'https://slack.com/api/chat.unfurl')
+    res = conn.post do |req|
+        req.url '/api/chat.unfurl'
+        req.headers['Content-Type'] = 'application/json'
+        req.headers['Authorization'] = "Bearer #{oauth}"
+        req.body = params_hash.to_json
+        #File.write("/temp/request", req.body)
+
+    end
+    #File.write("/temp/response", res.body)
+end
+
+if jsonHash.key? "challenge"
+    challenge = jsonHash["challenge"]
+    print challenge
+elsif jsonHash.key? "event"
+    event = jsonHash["event"]
+    links = event["links"]
+    if event["type"] == "link_shared"
+        unfurl = {}
+        unfurl["channel"] = event["channel"]
+        unfurl["ts"] = event["message_ts"]
+        unfurl["unfurls"] = {}
+
+        links.each do |l|
+            domain = l["domain"]
+            url = l["url"]
+            if (domain == "app.diffbot.com" || domain == "diffbot.com") && url.include?("/entity/")
+
+                unfurl["unfurls"][url] = {}
+                unfurl["unfurls"][url]["color"] = "#007bff"
+                unfurl["unfurls"][url]["blocks"] = retrieve_entity_data(diffbotToken, url)
+                ####unfurl["unfurls"][url]["text"] = run_kg_call(url, diffbotToken)
+            end 
+        end
+        # chat.unfurl
+        #File.write("/temp/unfurl", unfurl)
+        chat_unfurl(unfurl, oauthToken)
+        # note (unfurl) is a Hash: {"channel"=>"CKKF5EV1D", "ts"=>"1561418763.002100", "unfurls"=>{"https://app.diffbot.com"=>{"text"=>"output_from_kg_call"}}}
+    end
+else
+    #File.write(test,0)
+end

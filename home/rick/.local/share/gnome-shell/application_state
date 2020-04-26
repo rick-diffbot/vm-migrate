@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="yelp.desktop" open-window-count="0" score="4.00543212890625e-05" last-seen="1586804817"/>
+    <application id="code.desktop" open-window-count="0" score="1735.3505840093585" last-seen="1587063285"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="1" score="20475.489849199217" last-seen="1587902872"/>
+    <application id="org.gnome.baobab.desktop" open-window-count="0" score="3283" last-seen="1587412506"/>
+    <application id="firefox.desktop" open-window-count="2" score="1077.5567196457005" last-seen="1587902900"/>
+    <application id="update-manager.desktop" open-window-count="0" score="0" last-seen="1586993249"/>
+  </context>
+</application-state>

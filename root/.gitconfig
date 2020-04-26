@@ -1,0 +1,5 @@
+[user]
+	name = Rick Deininger
+	email = rick@diffbot.com
+[credential]
+	helper = store

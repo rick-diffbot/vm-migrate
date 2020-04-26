@@ -1,0 +1,85 @@
+#!/usr/bin/ruby
+
+# A script to receive the challenge token for a Slack app verification and return it
+
+require "cgi"
+require "json"
+require "net/http"
+require "uri"
+
+#token = 
+cgi = CGI.new
+params = cgi.params.first[0]
+jsonHash = JSON.parse(params)
+
+temp="/temp/temp"
+File.write(temp,0)
+
+#test = "/temp/request"
+unfurls = {}
+
+
+def run_kg_call(url)
+    return "output_from_kg_call"
+end
+
+def chat_unfurl(params_hash)
+#    File.write(temp,1)
+#    uri = URI.parse("https://slack.com/api/chat.unfurl")
+#    headers = {
+#        'Authorization': 'Bearer xoxp-663671050064-663188750996-666451947941-efbfa5e397ac8710a28551186a72e439',
+#        'Content-Type': 'application/json'
+##        'Accept' => 'application/json'
+#    }
+#    http = Net::HTTP.new(uri.host, uri.port)
+#    request = Net::HTTP::Post.new(uri.request_uri, header)
+#    request.body = params_hash.to_json
+#
+#    response = http.request(request)
+#    File.write("/temp/response", response)
+#    File.write("/temp/request", request.body)
+end
+
+#    uri = URI("https://slack.com/api/chat.unfurl?token=#{token}")
+#    req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
+#    req.body = json
+#    res = Net::HTTP.start(uri.hostname, uri.port) do |http|
+#        http.request(req)
+#    end
+#    File.write("/temp/request", req.body)
+#    File.write("/temp/response","#{res.code}\n#{res.body}")
+#end
+
+if jsonHash.key? "challenge"
+
+    puts "Content-type: text/html\n\n"
+    challenge = jsonHash["challenge"]
+    print challenge
+elsif jsonHash.key? "event"
+    puts "HTTP/1.0 200 OK"
+    event = jsonHash["event"]
+    links = event["links"]
+    if event["type"] == "link_shared"
+        unfurl = {}
+        unfurl["channel"] = event["channel"]
+        unfurl["ts"] = event["message_ts"]
+        # we must now take the links and run API calls for them
+        links.each do |l|
+            domain = l["domain"]
+            url = l["url"]
+            if domain == "app.diffbot.com"
+                unfurl["unfurls"] = {}
+                unfurl["unfurls"]["https://#{domain}"] = {}
+                unfurl["unfurls"]["https://#{domain}"]["text"] = run_kg_call(url)
+            end
+        end
+        # chat.unfurl
+        #unfurl_json = unfurl.to_json
+File.write(test,2)
+        chat_unfurl(unfurl)
+    end
+else
+    #File.write(test,0)
+end
+
+# NOTE TO SELF: clean up if statements to make more specific
